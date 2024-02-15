@@ -1,0 +1,11 @@
+header {
+    background-color: var(--color-brown);
+    color: white;
+    height: 72px;
+    width: calc(96% - 10px); /* Utilisation de calc pour ajuster la largeur */
+    margin: 17px 0 0 30px; /* Combinaison des propriétés margin */
+    border-radius: 12px;
+    position: fixed;
+    z-index: 3;
+}
+

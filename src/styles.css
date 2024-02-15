@@ -1,1 +1,52 @@
-/* You can add global styles to this file, and also import other style files */
+:root{
+    --color-brown: #5E2119;
+    --color-red: #4D0B0A;
+    --color-dew: #EAE1DF;
+    --color-yellow: #CB8E00;
+    --color-mole: #B59F9A;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+.flex{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.column{
+    flex-direction: column;
+}
+
+p{
+    font-family: 'Lora', serif;
+    font-size: 20px;
+}
+
+h1, h2, h3, h4{
+    font-family: 'Cormorant Unicase', serif;
+}
+
+h1{
+    font-size: 36px;
+}
+
+h2{
+    font-size: 32px;
+}
+
+img{
+    object-fit: cover;
+}
+
+div,section,main,header,nav{
+    border: 2px solid black;
+}
