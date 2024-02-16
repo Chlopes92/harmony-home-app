@@ -1,11 +1,9 @@
 export interface ICategoryImg {
     src: string;
-    alt: string;
 }
 
 export interface IProductImg {
     src: string;
-    alt: string;
 }
 
 export interface IProduct {
@@ -15,7 +13,6 @@ export interface IProduct {
     dimension: string;
     features: string[];
     price: number;
-    quantity: number;
     img: IProductImg;
     isAddToCart: boolean;
 }
