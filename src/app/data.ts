@@ -20,6 +20,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/canapes-fauteuils.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -42,6 +43,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/tables-basses.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -64,6 +66,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/meuble-tv.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -85,7 +88,8 @@ export const CATEGORY: ICategory[] = [
                 img: {
                     src: "assets/img-category/etageres-salon.png",
                 },
-                isAddToCart: false,
+                isAddToCart: false, 
+                isAddToWishlist: false,
             }
         ]
     },
@@ -108,6 +112,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/vaisselle.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -130,6 +135,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/mobilier-cuisine.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -152,6 +158,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/rangement-cuisine.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -174,6 +181,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/table.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -196,6 +204,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/chaises.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -218,6 +227,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/vaisseliers.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -240,6 +250,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/art-table.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -262,6 +273,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/lits.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -284,6 +296,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/mobilier-chambre.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -306,6 +319,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/lampe-chevet.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -328,6 +342,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/dressing.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -350,6 +365,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/bureaux.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -372,6 +388,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/chaise-bureau.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -394,6 +411,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/rangement-bureau.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -416,6 +434,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/baignoire.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -438,6 +457,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/meubles-salle-bain.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -460,6 +480,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/miroirs.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -482,6 +503,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/lavabo.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -504,6 +526,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/coussins.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -526,6 +549,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/plaids.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -548,6 +572,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/tapis.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -570,6 +595,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/rideaux.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+
             }
         ]
     },
@@ -592,6 +619,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/tableaux.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+                
             }
         ]
     },
@@ -614,6 +643,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/miroirs-décoratifs.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -636,6 +666,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/horloges.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+                
             }
         ]
     },
@@ -658,6 +690,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/lampes.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+
             }
         ]
     },
@@ -680,6 +714,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/suspensions.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+
             }
         ]
     },
@@ -702,6 +738,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/lampadaires.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+                
             }
         ]
     },
@@ -724,6 +762,7 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/appliques-murales.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
             }
         ]
     },
@@ -746,6 +785,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/guirlandes.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+
             }
         ]
     },
@@ -768,6 +809,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/ceramique.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+
             }
         ]
     },
@@ -790,6 +833,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/bougies.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+
             }
         ]
     },
@@ -812,6 +857,8 @@ export const CATEGORY: ICategory[] = [
                     src: "assets/img-category/panier.png",
                 },
                 isAddToCart: false,
+                isAddToWishlist: false,
+
             }
         ]
     },

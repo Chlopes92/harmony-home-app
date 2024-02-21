@@ -15,6 +15,7 @@ export interface IProduct {
     price: number;
     img: IProductImg;
     isAddToCart: boolean;
+    isAddToWishlist: boolean;
 }
 
 export type CategoryType = "Tous les produits" | "Salon" | "Cuisine" | "Salle à manger" | "Chambre" | "Bureau" | "Salle de bain" | "Textiles" | "Déco Murale" | "Luminaires" | "Accessoires";
