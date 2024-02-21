@@ -50,3 +50,7 @@ img{
 div,section,main,header,nav{
     border: 2px solid black;
 }
+
+li{
+    list-style: none;
+}

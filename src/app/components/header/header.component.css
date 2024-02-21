@@ -9,3 +9,6 @@ header {
     z-index: 3;
 }
 
+li{
+    display: inline-block;
+}
