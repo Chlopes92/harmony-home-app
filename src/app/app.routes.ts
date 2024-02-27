@@ -22,6 +22,10 @@ export const routes: Routes = [
         component: CategoryComponent
     },
     {
+        path:'search/:searchTerm',
+        component: ProductsComponent
+    },
+    {
         path:"products",
         component: ProductsComponent
     },
