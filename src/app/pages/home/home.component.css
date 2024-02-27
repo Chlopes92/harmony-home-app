@@ -37,12 +37,12 @@
     
 }
 
-.top{
+.container-top{
     display: flex;
     justify-content: space-around;
 }
 
-.top > img{
+.container-top > img{
     height: 75%;
     margin: 130px 120px 0 0;
     padding-left: 5%;
