@@ -5,8 +5,8 @@ import { NavCategoryComponent } from '../../components/nav-category/nav-category
   selector: 'app-category',
   standalone: true,
   imports: [NavCategoryComponent],
-  templateUrl: './category.component.html',
-  styleUrl: './category.component.css'
+  templateUrl: './sub-category.component.html',
+  styleUrl: './sub-category.component.css'
 })
 export class CategoryComponent {
 
