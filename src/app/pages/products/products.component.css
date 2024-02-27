@@ -1,0 +1,13 @@
+img{
+    border-radius: 12px;
+    box-shadow: 4px 5px 4px #c5c5c5;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+li{
+    width: 447px;
+}
