@@ -1,6 +1,6 @@
-import { Category } from "./shared/models/category";
-import { Product } from "./shared/models/product";
-import { SubCategory } from "./shared/models/subCategory";
+import { Category } from "./shared/models/Category";
+import { SubCategory } from "./shared/models/SubCategory";
+import { Product } from "./shared/models/Product";
 
 
 
