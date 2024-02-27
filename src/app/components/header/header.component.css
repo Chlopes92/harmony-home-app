@@ -9,6 +9,20 @@ header {
     z-index: 3;
 }
 
-li{
-    display: inline-block;
+ul{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
+
+.logo{
+    height: 57px;
+}
+
+.icon-nav{
+    display: flex;
+    flex-direction: row;
+}
+
+
+

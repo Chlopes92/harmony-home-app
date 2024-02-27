@@ -1,0 +1,8 @@
+<div>
+    <input #s type="text" placeholder="Je cherche..."
+    (keyup.enter)="search(s.value)"
+    [value]="searchTerm">
+    <button (click)="search(s.value)">
+        <img src="/assets/icons/search.png" alt="recherche">
+    </button>
+</div>
