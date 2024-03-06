@@ -13,8 +13,8 @@ export class CategoryService {
     return CATEGORIES;
   }
 
-  // getCategoryById(categoryId:string):Category[]{
-  //   return CATEGORIES.filter(category => category.id.includes(categoryId)); 
+  getCategoryById(categoryId:string):Category[]{
+    return CATEGORIES.filter(category => category.id.includes(categoryId)); 
 
-  // }
+  }
 }

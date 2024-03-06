@@ -68,229 +68,650 @@ export const SUB_CATEGORIES: SubCategory[] = [
         id: '1',
         name: "Canapés & Fauteuils",
         img_url: "assets/img-category/canapes-fauteuils.png",
-        categories_id: ['1','2'],
+        categories_id: [
+           { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+            },
+            {
+                id: '2',
+                name: "Salon",
+                icon_url: "/assets/icons-category/salon.png"
+            }
+            
+        ],
     },
     {
         id: '2',
         name: "Tables basses",
         img_url: "assets/img-category/tables-basses.png",
-        categories_id: ['1','2'],
+        categories_id: [
+            { 
+                 id:'1',
+                 name: "Tous les produits" ,
+                 icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                 id: '2',
+                 name: "Salon",
+                 icon_url: "/assets/icons-category/salon.png"
+             }
+             
+         ],
     },
     {
         id: '3',
         name: "Meubles TV",
         img_url: "assets/img-category/meuble-tv.png",
-        categories_id: ['1','2'],
-
+        categories_id: [
+            { 
+                 id:'1',
+                 name: "Tous les produits" ,
+                 icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                 id: '2',
+                 name: "Salon",
+                 icon_url: "/assets/icons-category/salon.png"
+             }
+             
+         ],
     },
     {
         id: '4',
         name: "Etagères de salon",
         img_url: "assets/img-category/etageres-salon.png",
-        categories_id: ['1','2'],
-
+        categories_id: [
+            { 
+                 id:'1',
+                 name: "Tous les produits" ,
+                 icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                 id: '2',
+                 name: "Salon",
+                 icon_url: "/assets/icons-category/salon.png"
+             }
+             
+         ],
     },
     {
         id: '5',
         name: "Vaisselle de cuisine",
         img_url: "assets/img-category/vaisselle.png",
-        categories_id: ['1', '3'], 
+        categories_id: [
+            { 
+                 id:'1',
+                 name: "Tous les produits" ,
+                 icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '3',
+                name: "Cuisine",
+                icon_url: "/assets/icons-category/cuisine.png"
+             }
+             
+         ],
     },
     {
         id: '6',
         name: "Mobilier de cuisine",
         img_url: "assets/img-category/mobilier-cuisine.png",
-        categories_id: ['1', '3'], 
+        categories_id: [
+            { 
+                 id:'1',
+                 name: "Tous les produits" ,
+                 icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '3',
+                name: "Cuisine",
+                icon_url: "/assets/icons-category/cuisine.png"
+             }
+             
+         ], 
     },
     {
         id: '7',
         name: "Rangement de cuisine",
         img_url: "assets/img-category/rangement-cuisine.png",
-        categories_id: ['1', '3'], 
+        categories_id: [
+            { 
+                 id:'1',
+                 name: "Tous les produits" ,
+                 icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '3',
+                name: "Cuisine",
+                icon_url: "/assets/icons-category/cuisine.png"
+             }
+             
+         ], 
     },
     {
         id: '8',
         name: "Tables à manger",
         img_url: "assets/img-category/table.png",
-        categories_id: ['1', '4'], 
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '4',
+                name: "Salle à manger",
+                icon_url: "/assets/icons-category/dining-room.png"
+             }
+             
+         ],
     },
     {
         id: '9',
         name: "Chaises & Bancs",
         img_url: "assets/img-category/chaises.png",
-        categories_id: ['1', '4'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '4',
+                name: "Salle à manger",
+                icon_url: "/assets/icons-category/dining-room.png"
+             }
+             
+         ],
     },
     {
         id: '10',
         name: "Vaisseliers & Buffets",
         img_url: "assets/img-category/vaisseliers.png",
-        categories_id: ['1', '4'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '4',
+                name: "Salle à manger",
+                icon_url: "/assets/icons-category/dining-room.png"
+             }
+             
+         ],
     },
     {
         id: '11',
         name: "Nappes & Sets de tables",
         img_url: "assets/img-category/art-table.png",
-        categories_id: ['1', '4'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '4',
+                name: "Salle à manger",
+                icon_url: "/assets/icons-category/dining-room.png"
+             }
+             
+         ],
     },
     {
         id: '12',
         name: "Lits & Têtes de lit",
         img_url: "assets/img-category/lits.png",
-        categories_id: ['1', '5'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '5',
+                name: "Chambre",
+                icon_url: "/assets/icons-category/chambre.png"
+             }
+             
+         ],
     },
     {
         id: '13',
         name: "Mobilier de chambre",
         img_url: "assets/img-category/mobilier-chambre.png",
-        categories_id: ['1', '5'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '5',
+                name: "Chambre",
+                icon_url: "/assets/icons-category/chambre.png"
+             }
+             
+         ],
     },
     {
         id: '14',
         name: "Lampe de chevet",
         img_url: "assets/img-category/lampe-chevet.png",
-        categories_id: ['1', '5'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '5',
+                name: "Chambre",
+                icon_url: "/assets/icons-category/chambre.png"
+             }
+             
+         ],
     },
     {
         id: '15',
         name: "Dressing",
         img_url: "assets/img-category/dressing.png",
-        categories_id: ['1', '5'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '5',
+                name: "Chambre",
+                icon_url: "/assets/icons-category/chambre.png"
+             }
+             
+         ],
     },
     {
         id: '16',
         name: "Bureaux design",
         img_url: "assets/img-category/bureaux.png",
-        categories_id: ['1', '6'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '6',
+                name: "Bureau",
+                icon_url: "/assets/icons-category/office.png"
+             }
+             
+         ],
     },
     {
         id: '17',
         name: "Chaises de bureau ergonomiques",
         img_url: "assets/img-category/chaise-bureau.png",
-        categories_id: ['1', '6'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '6',
+                name: "Bureau",
+                icon_url: "/assets/icons-category/office.png"
+             }
+            ],
     },
     {
         id: '18',
         name: "Rangements de bureau",
         img_url: "assets/img-category/rangement-bureau.png",
-        categories_id: ['1', '6'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '6',
+                name: "Bureau",
+                icon_url: "/assets/icons-category/office.png"
+             }
+            ],
     },
     {
         id: '19',
         name: "Baignoire & Douche",
         img_url: "assets/img-category/baignoire.png",
-        categories_id: ['1', '7'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '7',
+                name: "Salle de bain",
+                icon_url: "/assets/icons-category/toilet-room.png"
+             }
+            ],
     },
     {
         id: '20',
         name: "Meubles de salle de bain",
         img_url:  "assets/img-category/meubles-salle-bain.png",
-        categories_id: ['1', '7'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '7',
+                name: "Salle de bain",
+                icon_url: "/assets/icons-category/toilet-room.png"
+             }
+            ],
 
     },
     {
         id: '21',
         name: "Miroirs de salle de bain",
         img_url: "assets/img-category/miroirs.png",
-        categories_id: ['1', '7'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '7',
+                name: "Salle de bain",
+                icon_url: "/assets/icons-category/toilet-room.png"
+             }
+            ],
     },
     {
         id: '22',
         name: "Lavabo",
         img_url: "assets/img-category/lavabo.png",
-        categories_id: ['1', '7'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '7',
+                name: "Salle de bain",
+                icon_url: "/assets/icons-category/toilet-room.png"
+             }
+            ],
     },
     {
         id: '23',
         name: "Coussins décoratifs & Housse",
         img_url: "assets/img-category/coussins.png",
-        categories_id: ['1', '8'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '8',
+                name: "Textiles",
+                icon_url: "/assets/icons-category/textiles.png"
+             }
+            ],
     },
     {
         id: '24',
         name: "Plaids & Couvertures",
         img_url: "assets/img-category/plaids.png",
-       categories_id: ['1', '8'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '8',
+                name: "Textiles",
+                icon_url: "/assets/icons-category/textiles.png"
+             }
+            ],
     },
     {
         id: '25',
         name: "Tapis",
         img_url: "assets/img-category/tapis.png",
-       categories_id: ['1', '8'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '8',
+                name: "Textiles",
+                icon_url: "/assets/icons-category/textiles.png"
+             }
+            ],
     },
     {
         id: '26',
         name: "Rideaux & Stores",
         img_url: "assets/img-category/rideaux.png",
-       categories_id: ['1', '8'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '8',
+                name: "Textiles",
+                icon_url: "/assets/icons-category/textiles.png"
+             }
+            ],
     },
     {
         id: '27',
         name: "Tableaux artistiques",
         img_url: "assets/img-category/tableaux.png",
-        categories_id: ['1', '9'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '9',
+                name: "Déco Murale",
+                icon_url: "/assets/icons-category/deco-murale.png"
+             }
+            ],
 
     },
     {
         id: '28',
         name: "Miroirs décoratifs",
         img_url: "assets/img-category/miroirs-décoratifs.png",
-        categories_id: ['1', '9'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '9',
+                name: "Déco Murale",
+                icon_url: "/assets/icons-category/deco-murale.png"
+             }
+            ],
 
     },
     {
         id: '29',
         name: "Horloges design",
         img_url: "assets/img-category/horloges.png",
-        categories_id: ['1', '9'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '9',
+                name: "Déco Murale",
+                icon_url: "/assets/icons-category/deco-murale.png"
+             }
+            ],
 
     },
     {
         id: '30',
         name: "Lampes de table",
         img_url: "assets/img-category/lampes.png",
-        categories_id: ['1', '10'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '10',
+                name: "Luminaires",
+                icon_url: "/assets/icons-category/light.png"
+             }
+            ],
     },
     {
         id: '31',
         name: "Suspensions",
         img_url: "assets/img-category/suspensions.png",
-        categories_id: ['1', '10'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '10',
+                name: "Luminaires",
+                icon_url: "/assets/icons-category/light.png"
+             }
+            ],
     },
     {
         id: '32',
         name: "Lampadaires",
         img_url: "assets/img-category/lampadaires.png",
-        categories_id: ['1', '10'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '10',
+                name: "Luminaires",
+                icon_url: "/assets/icons-category/light.png"
+             }
+            ],
     },
     {
         id: '33',
         name: "Appliques murales",
         img_url:"assets/img-category/appliques-murales.png",
-        categories_id: ['1', '10'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '10',
+                name: "Luminaires",
+                icon_url: "/assets/icons-category/light.png"
+             }
+            ],
     },
     {
         id: '34',
         name: "Guirlandes lumineuses",
         img_url: "assets/img-category/guirlandes.png",
-        categories_id: ['1', '10'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '10',
+                name: "Luminaires",
+                icon_url: "/assets/icons-category/light.png"
+             }
+            ],
     },
     {
         id: '35',
         name: "Vases & Objets en céramiques",
         img_url: "assets/img-category/ceramique.png",
-        categories_id: ['1', '11'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '11',
+                name: "Accessoires",
+                icon_url: "/assets/icons-category/accessoires.png"
+             }
+            ],
     },
     {
         id: '36',
         name: "Bougies et photophores",
         img_url: "assets/img-category/bougies.png",
-        categories_id: ['1', '11'],
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '11',
+                name: "Accessoires",
+                icon_url: "/assets/icons-category/accessoires.png"
+             }
+            ],
     },
     {
         id: '37',
         name: "Paniers de rangement",
-        img_url: "assets/img-category/panier.png",
-        categories_id: ['1', '11'],
+        img_url: "assets/img-category/paniers.png",
+        categories_id: [
+            { 
+                id:'1',
+                name: "Tous les produits" ,
+                icon_url: "/assets/icons-category/all-categories.png",
+             },
+             {
+                id: '11',
+                name: "Accessoires",
+                icon_url: "/assets/icons-category/accessoires.png"
+             }
+            ],
     },
 ]
 
