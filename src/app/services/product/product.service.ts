@@ -20,4 +20,8 @@ export class ProductService {
   getProductById(productId:string): Product{
     return this.getAll().find(product => product.id == productId) ?? new Product();
   }
+
+   getProductsBySubCategoryId(subCategoryId: string): Product[] {
+    return PRODUCTS.filter(product => product.subCategory_id === subCategoryId);
+  }
 }

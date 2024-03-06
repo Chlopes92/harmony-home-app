@@ -1,7 +1,6 @@
 import { Routes } from '@angular/router';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CategoryComponent } from './pages/sub-category/sub-category.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CartComponent } from './pages/cart/cart.component';
@@ -11,6 +10,7 @@ import { SummeryComponent } from './pages/summery/summery.component';
 import { LegalInformationComponent } from './pages/legal-information/legal-information.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { GeneralConditionsComponent } from './pages/general-conditions/general-conditions.component';
+import { SubCategoryComponent } from './pages/sub-category/sub-category.component';
 
 export const routes: Routes = [
     {
@@ -19,7 +19,11 @@ export const routes: Routes = [
     },
     {
         path:"category",
-        component: CategoryComponent
+        component: SubCategoryComponent
+    },
+    {
+        path:"category/:id",
+        component: SubCategoryComponent
     },
     {
         path:'search/:searchTerm',
