@@ -2,9 +2,9 @@
 <div>
     <ul>
         @for (subCategory of subCategories; track subCategories){
-        <li>
-            <a routerLink="">
-                <img [src]="subCategory.img_url" [alt]="subCategory.name">
+        <li class="style-item">
+            <a routerLink="/products">
+                <img [src]="subCategory.img_url" [alt]="subCategory.name" class="style-image">
             </a>
             <p>{{ subCategory.name }}</p>
         </li>

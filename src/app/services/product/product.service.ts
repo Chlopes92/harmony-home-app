@@ -21,7 +21,9 @@ export class ProductService {
     return this.getAll().find(product => product.id == productId) ?? new Product();
   }
 
-   getProductsBySubCategoryId(subCategoryId: string): Product[] {
-    return PRODUCTS.filter(product => product.subCategory_id === subCategoryId);
-  }
+  //  getProductsBySubCategoryId(subCategoryId: string): Product[] {
+  //   return PRODUCTS.filter(product => 
+  //     product.subCategory_id.some(subCategoryId => subCategoryId.id === subCategoryId));
+  // }
+
 }
