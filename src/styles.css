@@ -52,6 +52,17 @@ img{
     object-fit: cover;
 }
 
+.style-image {
+    transition: transform 0.5s ease; /* Transition douce pour l'effet de zoom */
+    display: block; /* Pour éviter des problèmes d'espacement sous l'image */
+    width: 100%; /* Assure que l'image s'adapte à la largeur de son conteneur */
+    
+}
+
+.style-item:hover .style-image{
+    transform: scale(1.05); /* Zoom légèrement sur l'image au survol */
+}
+
 div,section,main,header,nav{
     border: 2px solid black;
 }

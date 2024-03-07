@@ -69,15 +69,11 @@ export const SUB_CATEGORIES: SubCategory[] = [
         name: "Canapés & Fauteuils",
         img_url: "assets/img-category/canapes-fauteuils.png",
         categories_id: [
-           { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+            { 
+                id:'1'
             },
             {
-                id: '2',
-                name: "Salon",
-                icon_url: "/assets/icons-category/salon.png"
+                id: '2'
             }
             
         ],
@@ -88,14 +84,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/tables-basses.png",
         categories_id: [
             { 
-                 id:'1',
-                 name: "Tous les produits" ,
-                 icon_url: "/assets/icons-category/all-categories.png",
+                 id:'1'
              },
              {
-                 id: '2',
-                 name: "Salon",
-                 icon_url: "/assets/icons-category/salon.png"
+                 id: '2'
              }
              
          ],
@@ -106,14 +98,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/meuble-tv.png",
         categories_id: [
             { 
-                 id:'1',
-                 name: "Tous les produits" ,
-                 icon_url: "/assets/icons-category/all-categories.png",
+                 id:'1'
              },
              {
-                 id: '2',
-                 name: "Salon",
-                 icon_url: "/assets/icons-category/salon.png"
+                 id: '2'
              }
              
          ],
@@ -124,14 +112,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/etageres-salon.png",
         categories_id: [
             { 
-                 id:'1',
-                 name: "Tous les produits" ,
-                 icon_url: "/assets/icons-category/all-categories.png",
+                 id:'1'
              },
              {
-                 id: '2',
-                 name: "Salon",
-                 icon_url: "/assets/icons-category/salon.png"
+                 id: '2'
              }
              
          ],
@@ -142,14 +126,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/vaisselle.png",
         categories_id: [
             { 
-                 id:'1',
-                 name: "Tous les produits" ,
-                 icon_url: "/assets/icons-category/all-categories.png",
+                 id:'1'
              },
              {
-                id: '3',
-                name: "Cuisine",
-                icon_url: "/assets/icons-category/cuisine.png"
+                id: '3'
              }
              
          ],
@@ -160,14 +140,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/mobilier-cuisine.png",
         categories_id: [
             { 
-                 id:'1',
-                 name: "Tous les produits" ,
-                 icon_url: "/assets/icons-category/all-categories.png",
+                 id:'1'
              },
              {
-                id: '3',
-                name: "Cuisine",
-                icon_url: "/assets/icons-category/cuisine.png"
+                id: '3'
              }
              
          ], 
@@ -178,14 +154,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/rangement-cuisine.png",
         categories_id: [
             { 
-                 id:'1',
-                 name: "Tous les produits" ,
-                 icon_url: "/assets/icons-category/all-categories.png",
+                 id:'1'
              },
              {
-                id: '3',
-                name: "Cuisine",
-                icon_url: "/assets/icons-category/cuisine.png"
+                id: '3'
              }
              
          ], 
@@ -196,14 +168,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/table.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '4',
-                name: "Salle à manger",
-                icon_url: "/assets/icons-category/dining-room.png"
+                id: '4'
              }
              
          ],
@@ -214,14 +182,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/chaises.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '4',
-                name: "Salle à manger",
-                icon_url: "/assets/icons-category/dining-room.png"
+                id: '4'
              }
              
          ],
@@ -232,14 +196,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/vaisseliers.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '4',
-                name: "Salle à manger",
-                icon_url: "/assets/icons-category/dining-room.png"
+                id: '4'
              }
              
          ],
@@ -250,14 +210,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/art-table.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '4',
-                name: "Salle à manger",
-                icon_url: "/assets/icons-category/dining-room.png"
+                id: '4'
              }
              
          ],
@@ -268,14 +224,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/lits.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '5',
-                name: "Chambre",
-                icon_url: "/assets/icons-category/chambre.png"
+                id: '5'
              }
              
          ],
@@ -286,14 +238,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/mobilier-chambre.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '5',
-                name: "Chambre",
-                icon_url: "/assets/icons-category/chambre.png"
+                id: '5'
              }
              
          ],
@@ -304,14 +252,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/lampe-chevet.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '5',
-                name: "Chambre",
-                icon_url: "/assets/icons-category/chambre.png"
+                id: '5'
              }
              
          ],
@@ -322,14 +266,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/dressing.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '5',
-                name: "Chambre",
-                icon_url: "/assets/icons-category/chambre.png"
+                id: '5'
              }
              
          ],
@@ -340,14 +280,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/bureaux.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '6',
-                name: "Bureau",
-                icon_url: "/assets/icons-category/office.png"
+                id: '6'
              }
              
          ],
@@ -358,14 +294,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/chaise-bureau.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '6',
-                name: "Bureau",
-                icon_url: "/assets/icons-category/office.png"
+                id: '6'
              }
             ],
     },
@@ -375,14 +307,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/rangement-bureau.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '6',
-                name: "Bureau",
-                icon_url: "/assets/icons-category/office.png"
+                id: '6'
              }
             ],
     },
@@ -392,14 +320,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/baignoire.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '7',
-                name: "Salle de bain",
-                icon_url: "/assets/icons-category/toilet-room.png"
+                id: '7'
              }
             ],
     },
@@ -409,14 +333,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url:  "assets/img-category/meubles-salle-bain.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '7',
-                name: "Salle de bain",
-                icon_url: "/assets/icons-category/toilet-room.png"
+                id: '7'
              }
             ],
 
@@ -427,14 +347,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/miroirs.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '7',
-                name: "Salle de bain",
-                icon_url: "/assets/icons-category/toilet-room.png"
+                id: '7'
              }
             ],
     },
@@ -444,14 +360,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/lavabo.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '7',
-                name: "Salle de bain",
-                icon_url: "/assets/icons-category/toilet-room.png"
+                id: '7'
              }
             ],
     },
@@ -461,14 +373,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/coussins.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '8',
-                name: "Textiles",
-                icon_url: "/assets/icons-category/textiles.png"
+                id: '8'
              }
             ],
     },
@@ -478,14 +386,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/plaids.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '8',
-                name: "Textiles",
-                icon_url: "/assets/icons-category/textiles.png"
+                id: '8'
              }
             ],
     },
@@ -495,14 +399,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/tapis.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '8',
-                name: "Textiles",
-                icon_url: "/assets/icons-category/textiles.png"
+                id: '8'
              }
             ],
     },
@@ -512,14 +412,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/rideaux.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '8',
-                name: "Textiles",
-                icon_url: "/assets/icons-category/textiles.png"
+                id: '8'
              }
             ],
     },
@@ -529,14 +425,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/tableaux.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '9',
-                name: "Déco Murale",
-                icon_url: "/assets/icons-category/deco-murale.png"
+                id: '9'
              }
             ],
 
@@ -547,14 +439,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/miroirs-décoratifs.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '9',
-                name: "Déco Murale",
-                icon_url: "/assets/icons-category/deco-murale.png"
+                id: '9'
              }
             ],
 
@@ -565,14 +453,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/horloges.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '9',
-                name: "Déco Murale",
-                icon_url: "/assets/icons-category/deco-murale.png"
+                id: '9'
              }
             ],
 
@@ -583,14 +467,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/lampes.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '10',
-                name: "Luminaires",
-                icon_url: "/assets/icons-category/light.png"
+                id: '10'
              }
             ],
     },
@@ -600,14 +480,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/suspensions.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '10',
-                name: "Luminaires",
-                icon_url: "/assets/icons-category/light.png"
+                id: '10'
              }
             ],
     },
@@ -617,14 +493,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/lampadaires.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '10',
-                name: "Luminaires",
-                icon_url: "/assets/icons-category/light.png"
+                id: '10'
              }
             ],
     },
@@ -634,14 +506,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url:"assets/img-category/appliques-murales.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '10',
-                name: "Luminaires",
-                icon_url: "/assets/icons-category/light.png"
+                id: '10'
              }
             ],
     },
@@ -651,14 +519,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/guirlandes.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '10',
-                name: "Luminaires",
-                icon_url: "/assets/icons-category/light.png"
+                id: '10'
              }
             ],
     },
@@ -668,14 +532,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/ceramique.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '11',
-                name: "Accessoires",
-                icon_url: "/assets/icons-category/accessoires.png"
+                id: '11'
              }
             ],
     },
@@ -685,14 +545,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/bougies.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '11',
-                name: "Accessoires",
-                icon_url: "/assets/icons-category/accessoires.png"
+                id: '11'
              }
             ],
     },
@@ -702,14 +558,10 @@ export const SUB_CATEGORIES: SubCategory[] = [
         img_url: "assets/img-category/paniers.png",
         categories_id: [
             { 
-                id:'1',
-                name: "Tous les produits" ,
-                icon_url: "/assets/icons-category/all-categories.png",
+                id:'1'
              },
              {
-                id: '11',
-                name: "Accessoires",
-                icon_url: "/assets/icons-category/accessoires.png"
+                id: '11'
              }
             ],
     },
@@ -724,7 +576,20 @@ export const PRODUCTS: Product[] = [
         features: ["Revêtement en tissu résistant", "Assise rembourrée pour un confort optimal", "Structure solide en bois"],
         price: 399.90,
         img_url: "assets/img-category/canapes-fauteuils.png",
-        subCategory_id: '1',
+        subCategory_id: [
+            { 
+                id:'1',
+                categories_id: [
+                    { 
+                        id:'1'
+                    },
+                    {
+                        id: '2'
+                    }
+                    
+                ],
+            }
+        ],
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -736,7 +601,20 @@ export const PRODUCTS: Product[] = [
         features: ["Bois massif", "Finition naturelle", "Design rustique"],
         price: 299.99,
         img_url: "assets/img-category/tables-basses.png",
-        subCategory_id:'2',
+        subCategory_id: [
+            {
+               id: '2',
+               categories_id: [
+                { 
+                     id:'1'
+                 },
+                 {
+                     id: '2'
+                 }
+                 
+             ],
+            },
+        ],
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -748,7 +626,20 @@ export const PRODUCTS: Product[] = [
         features: ["Bois de pin massif", "Finition teintée naturelle", "Design minimaliste"],
         price: 369.99,
         img_url: "assets/img-category/meuble-tv.png",
-        subCategory_id: '3',
+        subCategory_id:[
+            {
+                id:'3',
+                categories_id: [
+                    { 
+                         id:'1'
+                     },
+                     {
+                         id: '2'
+                     }
+                     
+                 ],
+            },
+        ] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -760,7 +651,20 @@ export const PRODUCTS: Product[] = [
         features: ["Bois massif", "Finition teinture blanche", "Plusieurs niveaux"],
         price: 79.99,
         img_url: "assets/img-category/etageres-salon.png",
-        subCategory_id: '4',
+        subCategory_id: [
+            {
+                id:'4',
+                categories_id: [
+                    { 
+                         id:'1'
+                     },
+                     {
+                         id: '2'
+                     }
+                     
+                 ],
+            }
+        ] 
         // isAddToCart: false, 
         // isAddToWishlist: false,
     },
@@ -772,7 +676,20 @@ export const PRODUCTS: Product[] = [
         features: ["Porcelaine", "Passe au lave-vaisselle", "Style épuré"],
         price: 79.99,
         img_url: "assets/img-category/vaisselle.png",
-        subCategory_id: '5',
+        subCategory_id: [
+            {
+                id: '5',
+                categories_id: [
+                    { 
+                         id:'1'
+                     },
+                     {
+                        id: '3'
+                     }
+                     
+                 ],
+            }
+        ] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -784,7 +701,20 @@ export const PRODUCTS: Product[] = [
         features: ["Bois massif", "Finition teinture menthe", "Design contemporain"],
         price: 1289.99,
         img_url: "assets/img-category/mobilier-cuisine.png",
-        subCategory_id: '6',
+        subCategory_id: [
+            {
+                id: '6',
+                categories_id: [
+                    { 
+                         id:'1'
+                     },
+                     {
+                        id: '3'
+                     }
+                     
+                 ], 
+            }
+        ]
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -796,7 +726,18 @@ export const PRODUCTS: Product[] = [
         features: ["Bois massif", "Base antidérapante", "Design pratique"],
         price: 35.99,
         img_url: "assets/img-category/rangement-cuisine.png",
-        subCategory_id: '7',
+        subCategory_id:[{
+            id: '7',
+            categories_id: [
+                { 
+                     id:'1'
+                 },
+                 {
+                    id: '3'
+                 }
+                 
+             ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -808,7 +749,18 @@ export const PRODUCTS: Product[] = [
         features: ["Marbre véritable", "Pieds en métal", "Design élégant"],
         price: 1189.99,
         img_url: "assets/img-category/table.png",
-        subCategory_id: '8',
+        subCategory_id: [{
+            id: '8',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '4'
+                 }
+                 
+             ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -820,7 +772,18 @@ export const PRODUCTS: Product[] = [
         features: ["Bois massif", "Rembourrage en tissu", "Design élégant"],
         price: 250,
         img_url: "assets/img-category/chaises.png",
-        subCategory_id: '9',
+        subCategory_id:[{
+            id: '9',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '4'
+                 }
+                 
+             ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -832,7 +795,18 @@ export const PRODUCTS: Product[] = [
         features: ["Noyer massif", "Étagères en bois", "Design robuste"],
         price: 250,
         img_url: "assets/img-category/vaisseliers.png",
-        subCategory_id: '10',
+        subCategory_id: [{
+            id: '10',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '4'
+                 }
+                 
+             ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
    },
@@ -844,7 +818,18 @@ export const PRODUCTS: Product[] = [
         features: ["Feutre épais", "Résistant à la chaleur", "Facile à nettoyer"],
         price: 79.89,
         img_url: "assets/img-category/art-table.png",
-        subCategory_id: '11',
+        subCategory_id:[{
+           id: '11',
+           categories_id: [
+            { 
+                id:'1'
+             },
+             {
+                id: '4'
+             }
+             
+         ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -856,7 +841,18 @@ export const PRODUCTS: Product[] = [
         features: ["Bois massif", "Tête de lit rembourrée", "Sommier inclus"],
         price: 1589.89,
         img_url: "assets/img-category/lits.png",
-        subCategory_id: '12',
+        subCategory_id: [{
+            id: '12',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '5'
+                 }
+                 
+             ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -868,7 +864,18 @@ export const PRODUCTS: Product[] = [
         features: ["Bois durable", "Étagère inclus", "Style épuré"],
         price: 1589.89,
         img_url: "assets/img-category/mobilier-chambre.png",
-        subCategory_id: '13',
+        subCategory_id: [{
+            id: '13',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '5'
+                 }
+                 
+             ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -880,7 +887,18 @@ export const PRODUCTS: Product[] = [
         features: ["Bois teinté", "Abat-jour en jute tressé", "Style épuré"],
         price: 69.89,
         img_url: "assets/img-category/lampe-chevet.png",
-        subCategory_id: '14',
+        subCategory_id:[{
+            id :'14',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '5'
+                 }
+                 
+             ],
+        }]
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -892,7 +910,18 @@ export const PRODUCTS: Product[] = [
         features: ["Bois robuste", "Étagères modulables", "Tringles à vêtements"],
         price: 3590.99,
         img_url: "assets/img-category/dressing.png",
-        subCategory_id: '15',
+        subCategory_id: [{
+            id:'15',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '5'
+                 }
+                 
+             ],
+        }]
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -904,7 +933,18 @@ export const PRODUCTS: Product[] = [
         features: ["Bois robuste", "Design moderne", "Rangements intégrés"],
         price: 1255,
         img_url: "assets/img-category/bureaux.png",
-        subCategory_id: '16',
+        subCategory_id:[{
+            id: '16',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '6'
+                 }
+                 
+             ],
+        }]
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -916,7 +956,18 @@ export const PRODUCTS: Product[] = [
         features: ["Dossier inclinable", "Pivotante à 360 degrés", "Ajustable en hauteur"],
         price: 789.99,
         img_url: "assets/img-category/chaise-bureau.png",
-        subCategory_id: '17',
+        subCategory_id: [{
+            id: '17',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '6'
+                 }
+                 
+             ],
+        }]
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -928,7 +979,18 @@ export const PRODUCTS: Product[] = [
         features: ["Étagères réglables", "Montage mural", "Design élégant"],
         price: 79,
         img_url: "assets/img-category/rangement-bureau.png",
-        subCategory_id: '18',
+        subCategory_id: [{
+            id: '18',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '6'
+                 }
+                 
+             ],
+        }]
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -940,7 +1002,17 @@ export const PRODUCTS: Product[] = [
         features: ["Forme ergonomique", "Facile à entretenir", "Design moderne"],
         price: 989,
         img_url: "assets/img-category/baignoire.png",
-        subCategory_id: '19',
+        subCategory_id: [{
+            id:'19',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '7'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -952,7 +1024,17 @@ export const PRODUCTS: Product[] = [
         features: ["Tiroirs spacieux", "Portes avec étagères", "Design moderne"],
         price: 889,
         img_url: "assets/img-category/meubles-salle-bain.png",
-        subCategory_id: '20',
+        subCategory_id: [{
+            id: '20',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '7'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -964,7 +1046,17 @@ export const PRODUCTS: Product[] = [
         features: ["Facile à accrocher", "Cadre solide", "Design rustique"],
         price: 125,
         img_url: "assets/img-category/miroirs.png",
-        subCategory_id: '21',
+        subCategory_id: [{
+            id: '21',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '7'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -976,7 +1068,17 @@ export const PRODUCTS: Product[] = [
         features: ["Installation facile", "Facile à nettoyer", "Design moderne"],
         price: 150,
         img_url: "assets/img-category/lavabo.png",
-        subCategory_id: '22',
+        subCategory_id: [{
+            id: '22',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '7'
+                 }
+                ],
+        }]
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -988,7 +1090,17 @@ export const PRODUCTS: Product[] = [
         features: ["Fermeture éclair invisible", "Motifs géométriques", "Design minimaliste"],
         price: 55,
         img_url: "assets/img-category/coussins.png",
-        subCategory_id: '23',
+        subCategory_id: [{
+            id:'23',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '8'
+                 }
+                ],
+        }]
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1000,7 +1112,17 @@ export const PRODUCTS: Product[] = [
         features: ["Texture légère", "Couleur Jaune moutarde", "Design minimaliste"],
         price: 45,
         img_url: "assets/img-category/plaids.png",
-        subCategory_id: '24',
+        subCategory_id: [{
+            id:'24',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '8'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1012,7 +1134,17 @@ export const PRODUCTS: Product[] = [
         features: ["Matériau naturel", "Motif tressé", "Design minimaliste"],
         price: 75,
         img_url: "assets/img-category/tapis.png",
-        subCategory_id: '25',
+        subCategory_id: [{
+            id:'25',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '8'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1024,7 +1156,17 @@ export const PRODUCTS: Product[] = [
         features: ["Facile à accrocher", "Polyester", "Stores réglables"],
         price: 250,
         img_url: "assets/img-category/rideaux.png",
-        subCategory_id: '26',
+        subCategory_id: [{
+            id:'26',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '8'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
    },
@@ -1036,7 +1178,17 @@ export const PRODUCTS: Product[] = [
         features: ["Facile à accrocher", "Impression de qualité", "Design relaxant"],
         price: 100,
         img_url: "assets/img-category/tableaux.png",
-        subCategory_id: '27',
+        subCategory_id: [{
+            id:'27',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '9'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     
@@ -1049,7 +1201,18 @@ export const PRODUCTS: Product[] = [
         features: ["Design contemporain", "Cadre élégant", "Facile à accrocher"],
         price: 75,
         img_url: "assets/img-category/miroirs-décoratifs.png",
-        subCategory_id: '28',
+        subCategory_id: [{
+            id:'28',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '9'
+                 }
+                ],
+
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1061,7 +1224,17 @@ export const PRODUCTS: Product[] = [
         features: ["Facile à installer", "Chirffres romains", "Design minimaliste"],
         price: 59.99,
         img_url: "assets/img-category/horloges.png",
-        subCategory_id: '29',
+        subCategory_id: [{
+            id:'29',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '9'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1073,7 +1246,17 @@ export const PRODUCTS: Product[] = [
         features: ["Interrupteur sur le câble", "Ampoule LED intégrée", "Design contemporain"],
         price: 139.99,
         img_url: "assets/img-category/lampes.png",
-        subCategory_id: '30',
+        subCategory_id: [{
+            id:'30',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '10'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1085,7 +1268,17 @@ export const PRODUCTS: Product[] = [
         features: ["Câble ajustable", "Ampoule LED intégrée", "Design minimaliste"],
         price: 139.99,
         img_url: "assets/img-category/suspensions.png",
-        subCategory_id: '31',
+        subCategory_id: [{
+            id:'31',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '10'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1097,7 +1290,17 @@ export const PRODUCTS: Product[] = [
         features: ["Interrupteur sur le câble", "Ampoule LED intégrée", "Design élégant"],
         price: 239.99,
         img_url: "assets/img-category/lampadaires.png",
-        subCategory_id: '32',
+        subCategory_id: [{
+            id:'32',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '10'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,    
     },
@@ -1109,7 +1312,17 @@ export const PRODUCTS: Product[] = [
         features: ["Pose facile", "Ampoule LED intégrée", "Design élégant"],
         price: 45.80,
         img_url: "assets/img-category/appliques-murales.png",
-        subCategory_id: '33',
+        subCategory_id: [{
+            id:'33',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '10'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1121,7 +1334,17 @@ export const PRODUCTS: Product[] = [
         features: ["Perles brillantes", "LEDs économes en énergie", "Facile à suspendre"],
         price: 25,
         img_url: "assets/img-category/guirlandes.png",
-        subCategory_id: '34',
+        subCategory_id: [{
+            id:'34',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '10'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1133,7 +1356,17 @@ export const PRODUCTS: Product[] = [
         features: ["Détails soignés", "Finition brillante", "Couleur blanche"],
         price: 75.80,
         img_url: "assets/img-category/ceramique.png",
-        subCategory_id: '35',
+        subCategory_id: [{
+            id:'35',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '11'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1145,7 +1378,17 @@ export const PRODUCTS: Product[] = [
         features: ["Cire naturelle", "Combustion longue durée", "Couleur blanche"],
         price: 35.80,
         img_url: "assets/img-category/bougies.png",
-        subCategory_id: '36',
+        subCategory_id: [{
+            id:'36',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '11'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
     },
@@ -1157,7 +1400,17 @@ export const PRODUCTS: Product[] = [
         features: ["Bois robuste", "Étagères modulables", "Tringles à vêtements"],
         price: 35.80,
         img_url: "assets/img-category/paniers.png",
-        subCategory_id: '37',
+        subCategory_id: [{
+            id:'37',
+            categories_id: [
+                { 
+                    id:'1'
+                 },
+                 {
+                    id: '11'
+                 }
+                ],
+        }] 
         // isAddToCart: false,
         // isAddToWishlist: false,
    }
