@@ -1,1 +1,9 @@
-<p>product-details works!</p>
+<div class="container">
+    @if(product.id){
+        <ul>
+            <li><img [src]="product.img_url" [alt]="product.title"></li>
+            <li><span>{{product.price}}</span></li>
+            <li><button (click)="addToCart()">Ajouter au panier</button></li>
+        </ul>
+    }
+</div>
