@@ -64,7 +64,7 @@ img{
 }
 
 div,section,main,header,nav{
-    border: 2px solid black;
+    border: 2px solid transparent;
 }
 
 li{

@@ -1,1 +1,39 @@
-<p>cart works!</p>
+@if(cart && cart.items.length){
+    <div class="container">
+        <h2>Mon Panier</h2>
+        <ul>
+            @for(cartItem of cart.items; track cart.items){
+                <li>
+                    <div>
+                        <img [src]="cartItem.product.img_url" [alt]="cartItem.product.title">
+                    </div>
+                    <div>
+                        {{cartItem.product.title}}
+                    </div>
+                    <div>
+                        {{cartItem.price}}
+                    </div>
+                    <div>
+                        <select #quantitySelect [value]="cartItem.quantity" (change)="changeQuantity(cartItem, quantitySelect.value)">
+                            <option>1</option>
+                            <option>2</option>
+                            <option>3</option>
+                        </select>
+                    </div>
+                    <div>
+                        <button class="remove-button" (click)="removeFromCart(cartItem)">
+                            Remove
+                        </button>
+                    </div>
+                </li>
+            }
+        </ul>
+        <div class="checkout">
+            <div>
+                <div class="product-count">{{cart.totalCount}}</div>
+                <div class="total-price">{{cart.totalPrice}}</div>
+            </div>
+            <!-- <a routerLink="/summary">Proceed to Checkout</a> -->
+        </div>
+    </div>
+}
