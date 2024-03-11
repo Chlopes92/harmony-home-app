@@ -63,8 +63,11 @@ img{
     transform: scale(1.05); /* Zoom légèrement sur l'image au survol */
 }
 
+/* .button-filled{}
+.button-empty{} */
+
 div,section,main,header,nav{
-    border: 2px solid transparent;
+    border: 2px solid black;
 }
 
 li{

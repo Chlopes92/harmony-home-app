@@ -1,13 +1,14 @@
+<!-- <app-nav-category></app-nav-category> -->
 <div>
     <ul>
         @for (product of products; track products){
-            <li >
-                <a routerLink="/product-details/{{product.id}}">
-                    <img [src]="product.img_url" [alt]="product.title">
-                    <p>{{product.title}}</p>
-                    <p>{{product.price | currency: 'EUR'}}</p>
-                </a>
-            </li>
+        <li>
+            <a routerLink="/product-details/{{product.id}}">
+                <img [src]="product.img_url" [alt]="product.title">
+            </a>
+            <p>{{product.title}}</p>
+            <p>{{product.price | currency: 'EUR'}}</p>
+        </li>
         }
     </ul>
 </div>

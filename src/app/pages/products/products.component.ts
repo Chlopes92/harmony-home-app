@@ -3,11 +3,12 @@ import { ProductService } from '../../services/product/product.service';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Product } from '../../shared/models/Product';
 import { CommonModule } from '@angular/common';
+import { NavCategoryComponent } from '../../components/nav-category/nav-category.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [RouterLink, CommonModule],
+  imports: [RouterLink, CommonModule, NavCategoryComponent],
   templateUrl: './products.component.html',
   styleUrl: './products.component.css'
 })
