@@ -8,10 +8,10 @@
                         <img [src]="cartItem.product.img_url" [alt]="cartItem.product.title">
                     </div>
                     <div>
-                        {{cartItem.product.title}}
+                       <p>{{cartItem.product.title}}</p> 
                     </div>
                     <div>
-                        {{cartItem.price}}
+                       <p>{{cartItem.price}}</p> 
                     </div>
                     <div>
                         <select #quantitySelect [value]="cartItem.quantity" (change)="changeQuantity(cartItem, quantitySelect.value)">
@@ -22,7 +22,7 @@
                     </div>
                     <div>
                         <button class="remove-button" (click)="removeFromCart(cartItem)">
-                            Remove
+                            <img src="assets/icons/delete.png" alt="Supprimer">
                         </button>
                     </div>
                 </li>
@@ -30,10 +30,14 @@
         </ul>
         <div class="checkout">
             <div>
-                <div class="product-count">{{cart.totalCount}}</div>
-                <div class="total-price">{{cart.totalPrice}}</div>
+                <p class="product-count">{{cart.totalCount}}</p>
+                <p class="total-price">{{cart.totalPrice}}</p>
             </div>
             <!-- <a routerLink="/summary">Proceed to Checkout</a> -->
         </div>
     </div>
+}
+
+@else {
+    <app-empty-cart></app-empty-cart>
 }

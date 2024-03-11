@@ -49,6 +49,9 @@ export class CartService {
     this.cart.totalPrice = this.cart.items.reduce((prevSum, currentItem) => prevSum + currentItem.price, 0);
     this.cart.totalCount = this.cart.items.reduce((prevSum, currentItem) => prevSum + currentItem.quantity, 0);
 
+    // Arrondi à deux décimales
+    // this.cart.totalPrice = Math.round(this.cart.totalPrice * 100) / 100;
+
     const cartJson = JSON.stringify(this.cart);
     localStorage.setItem('Cart', cartJson);
     this.cartSubject.next(this.cart);
