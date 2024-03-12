@@ -21,6 +21,8 @@ span{
     padding: 0.1rem 0.45rem;
     border-radius: 100rem;
     font-size: 0.9rem;
+    position: relative;
+    right: 1em 
 }
 
 .logo{

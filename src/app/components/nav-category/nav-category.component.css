@@ -6,6 +6,11 @@
     justify-content: center;
     gap: 2%;
     align-items: center;
-    padding-bottom: 2rem;
+    padding-bottom: 4rem;
 }
 
+.item:hover .style-icon, .style-icon-active {
+    border-bottom: solid black 3px;
+    font-weight: bold;
+
+}

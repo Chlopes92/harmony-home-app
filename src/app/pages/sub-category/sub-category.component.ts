@@ -28,6 +28,7 @@ export class SubCategoryComponent implements OnInit{
       // Utilisez '1' comme valeur par défaut si 'id' n'est pas présent dans les paramètres
       const categoryId = params['id'] || '1'; // Assurez-vous que '1' est bien l'ID de votre première catégorie
       this.subCategories = this.subCategoryService.getSubCategoryByCategoryId(categoryId);
+      console.log(this.subCategories)
     });
 }
 
