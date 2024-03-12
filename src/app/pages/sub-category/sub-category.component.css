@@ -4,3 +4,7 @@ ul{
     justify-content: space-evenly;
     row-gap: 2rem;
 }
+
+img{
+    box-shadow: 4px 2px 6px #ababab
+}

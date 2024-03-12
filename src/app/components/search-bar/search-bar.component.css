@@ -8,5 +8,12 @@ input{
 button{
     border: none;
     background: none;
-    
+    position: relative;
+    right: 2.5rem;
+    bottom: -0.6rem;
+}
+
+::placeholder {
+    padding: 1rem; /* Fixe ou vous pouvez aussi utiliser clamp() si nécessaire */
+    font-size: clamp(14px, 2vw, 16px); /* S'ajuste entre 14px et 16px en fonction de la largeur de la fenêtre */
 }
