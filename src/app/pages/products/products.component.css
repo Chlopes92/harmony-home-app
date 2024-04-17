@@ -1,14 +1,13 @@
 img{
     border-radius: 12px;
     box-shadow: 4px 5px 4px #ababab;
+    width: 447px;
+    height: 350px;
 }
 
 ul{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-}
-
-li{
-    width: 447px;
+    grid-gap: 21px;
 }

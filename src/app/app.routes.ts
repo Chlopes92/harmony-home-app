@@ -22,7 +22,7 @@ export const routes: Routes = [
         component: SubCategoryComponent
     },
     {
-        path:"category/:id",
+        path:"category/:slug",
         component: SubCategoryComponent
     },
     {
@@ -30,7 +30,7 @@ export const routes: Routes = [
         component: ProductsComponent
     },
     {
-        path:"products",
+        path:"category/:subCategoryId/products",
         component: ProductsComponent
     },
     {
