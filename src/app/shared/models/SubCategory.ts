@@ -1,9 +1,11 @@
-import { Category } from "./Category";
+export interface ApiResponse {
+    success: boolean;
+    data: SubCategory[];
+}
 
-export class SubCategory {
-    id!: string;
-    name?: string;
-    img_url?: string;
-    categories_id!: Category[]; 
+export interface SubCategory {
+    id: string;
+    name: string;
+    img_url: string; 
 }
 

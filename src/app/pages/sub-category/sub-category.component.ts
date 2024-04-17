@@ -17,20 +17,26 @@ export class SubCategoryComponent implements OnInit{
   categories: Category[] = [];
   subCategories: SubCategory[] = [];
 
-  constructor(private categoryService: CategoryService, private subCategoryService: SubCategoryService, public activatedRoute: ActivatedRoute) {
-    this.categories = categoryService.getAll();
-    // this.subCategories = subCategoryService.getAll();
-    // console.log(this.subCategories);
-  }
+  constructor(private categoryService: CategoryService, private subCategoryService: SubCategoryService, public activatedRoute: ActivatedRoute) {}
 
   ngOnInit(): void {
     this.activatedRoute.params.subscribe(params => {
-      // Utilisez '1' comme valeur par défaut si 'id' n'est pas présent dans les paramètres
-      const categoryId = params['id'] || '1'; // Assurez-vous que '1' est bien l'ID de votre première catégorie
-      this.subCategories = this.subCategoryService.getSubCategoryByCategoryId(categoryId);
-      console.log(this.subCategories)
+      const slug = params['slug'] || 'tous-les-produits'; // Slug de l'url
+      console.log('Route params: ', params);
+      // console.log('categoryService: ', this.categoryService.getCategories());
+      this.categoryService.getCategories().subscribe(data => {
+        console.log('data : ', data);
+        data.forEach(category => {
+          const categorySlug = category.name.replace(/ /g,'-').toLowerCase();
+          // cosole.log(categorySlug)
+          if (slug === categorySlug){
+            console.log(+category.id);
+            this.subCategoryService.getSubCategories(+category.id).subscribe(data => {
+              this.subCategories = data;
+            })
+          }
+        })   
+      });
     });
-}
-
-
+  }
 }

@@ -4,7 +4,7 @@
         @for (subCategory of subCategories; track subCategories){
         <li class="style-item">
             <div class="style-image">
-                <a routerLink="/products">
+                <a [routerLink]="['/category', subCategory.id, 'products']">
                     <img [src]="subCategory.img_url" [alt]="subCategory.name">
                 </a>
             <p>{{ subCategory.name }}</p>

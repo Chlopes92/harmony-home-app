@@ -17,17 +17,17 @@ export class HeaderComponent {
   products: Product[] = [];
   cart!: Cart;
 
-  constructor(private productService:ProductService, activatedRoute:ActivatedRoute, private cartService:CartService) {
-    activatedRoute.params.subscribe((params) => {
-      if(params['searchTerm'])
-      this.products = this.productService.getAllProductBySearchTerm(params['searchTerm']);
-      else
-      this.products = productService.getAll();
-    });
+  // constructor(private productService:ProductService, activatedRoute:ActivatedRoute, private cartService:CartService) {
+  //   activatedRoute.params.subscribe((params) => {
+  //     if(params['searchTerm'])
+  //     this.products = this.productService.getAllProductBySearchTerm(params['searchTerm']);
+  //     else
+  //     this.products = productService.getAll();
+  //   });
 
-    this.cartService.getCartObservable().subscribe((cart) => {
-      this.cart = cart;
-    });
-  }
+  //   this.cartService.getCartObservable().subscribe((cart) => {
+  //     this.cart = cart;
+  //   });
+  // }
 
 }
