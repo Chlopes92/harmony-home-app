@@ -3,6 +3,11 @@ export interface ApiResponse {
   data: Product[];
 }
 
+export interface OtherResponse{
+  success: boolean;
+  data: Product;
+}
+
 export interface Product {
   id: string;
   title: string;

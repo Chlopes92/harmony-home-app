@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Product } from '../../shared/models/Product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product/product.service';
@@ -11,16 +11,27 @@ import { CartService } from '../../services/cart/cart.service';
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
-export class ProductDetailsComponent {
+export class ProductDetailsComponent implements OnInit{
   product!: Product;
 
-  // constructor(activatedRoute: ActivatedRoute, productService:ProductService,
-  //   private cartService:CartService, private router:Router){
-  //     activatedRoute.params.subscribe((params) => {
-  //       if(params['id'])
-  //       this.product = productService.getProductById(params['id']);
-  //     });
-  // }
+  constructor(
+    public activatedRoute: ActivatedRoute, 
+    private productService:ProductService, 
+    private cartService:CartService, 
+    private router:Router
+  ) {}
+
+  ngOnInit() {
+    this.activatedRoute.params.subscribe(params => {
+      const id = params['id'];
+      if(id) {
+        this.productService.getProductById(id).subscribe(product => {
+          this.product = product;
+          console.log(this.product);
+        });
+      }
+    });
+  }
   
   // addToCart(){
   //   this.cartService.addToCart(this.product);
