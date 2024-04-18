@@ -31,11 +31,12 @@ export class ProductDetailsComponent implements OnInit{
         });
       }
     });
+    this.addToCart();
   }
   
-  // addToCart(){
-  //   this.cartService.addToCart(this.product);
-  //   this.router.navigateByUrl('/cart');
-  // }
+  addToCart(){
+    this.cartService.addToCart(this.product);
+    this.router.navigateByUrl('/cart');
+  }
 
 }

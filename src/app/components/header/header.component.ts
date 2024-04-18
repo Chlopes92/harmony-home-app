@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterModule } from '@angular/router';
 import { SearchBarComponent } from '../search-bar/search-bar.component';
 import { Product } from '../../shared/models/Product';
@@ -13,21 +13,23 @@ import { CartService } from '../../services/cart/cart.service';
   templateUrl: './header.component.html',
   styleUrl: './header.component.css'
 })
-export class HeaderComponent {
+export class HeaderComponent implements OnInit{
   products: Product[] = [];
   cart!: Cart;
 
-  // constructor(private productService:ProductService, activatedRoute:ActivatedRoute, private cartService:CartService) {
-  //   activatedRoute.params.subscribe((params) => {
-  //     if(params['searchTerm'])
-  //     this.products = this.productService.getAllProductBySearchTerm(params['searchTerm']);
-  //     else
-  //     this.products = productService.getAll();
-  //   });
+  constructor(private productService:ProductService, activatedRoute:ActivatedRoute, private cartService:CartService) {
+    // activatedRoute.params.subscribe((params) => {
+    //   if(params['searchTerm'])
+    //   this.products = this.productService.getAllProductBySearchTerm(params['searchTerm']);
+    //   else
+    //   this.products = productService.getAll();
+    // });
+  }
 
-  //   this.cartService.getCartObservable().subscribe((cart) => {
-  //     this.cart = cart;
-  //   });
-  // }
+  ngOnInit(){
+    this.cartService.getCartObservable().subscribe((cart) => {
+      this.cart = cart;
+    });
+  }
 
 }
