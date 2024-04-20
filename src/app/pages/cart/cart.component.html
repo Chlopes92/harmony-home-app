@@ -1,43 +1,46 @@
 @if(cart && cart.items.length){
-    <div class="container">
+    <section>
         <h2>Mon Panier</h2>
-        <ul>
+        <ul class="container">
+            <p>
+                <a (click)="clearCart()">Vider le panier</a>
+            </p>
             @for(cartItem of cart.items; track cart.items){
-                <li>
-                    <div>
-                        <img [src]="cartItem.product.img_url" [alt]="cartItem.product.title">
-                    </div>
-                    <div>
-                       <p>{{cartItem.product.title}}</p> 
-                    </div>
-                    <div>
-                       <p>{{cartItem.price}}</p> 
-                    </div>
-                    <div>
-                        <select #quantitySelect [value]="cartItem.quantity" (change)="changeQuantity(cartItem, quantitySelect.value)">
-                            <option>1</option>
-                            <option>2</option>
-                            <option>3</option>
-                        </select>
-                    </div>
-                    <div>
-                        <button class="remove-button" (click)="removeFromCart(cartItem)">
-                            <img src="assets/icons/delete.png" alt="Supprimer">
-                        </button>
-                    </div>
-                </li>
+            <li>
+                <div>
+                    <img class="product-img" [src]="cartItem.product.img_url" [alt]="cartItem.product.title">
+                </div>
+                <div>
+                    <p>{{cartItem.product.title}}</p>
+                    <p>{{cartItem.product.dimension}}</p>
+                </div>
+                <div class="flex-direction">
+                    <p>{{cartItem.price | currency: 'EUR'}}</p>
+                    <select #quantitySelect [value]="cartItem.quantity"
+                        (change)="changeQuantity(cartItem, quantitySelect.value)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                    <button class="remove-button" (click)="removeFromCart(cartItem)">
+                        <img src="assets/icons/delete.png" alt="Supprimer">
+                    </button>
+                </div>
+            </li>
             }
         </ul>
-        <div class="checkout">
-            <div>
-                <p class="product-count">{{cart.totalCount}}</p>
-                <p class="total-price">{{cart.totalPrice}}</p>
-            </div>
-            <!-- <a routerLink="/summary">Proceed to Checkout</a> -->
+        <div>
+            <p class="total-price">{{cart.totalPrice | currency: 'EUR'}}</p>
+            <button routerLink="/delivery-form">Passer commande</button>
+            <p>
+                <a routerLink="/category">Continuer mes achats</a>
+            </p>
+    
         </div>
-    </div>
-}
-
-@else {
+        <p class="product-count">Total d’article : {{cart.totalCount}}</p>
+    </section>
+    }
+    
+    @else {
     <app-empty-cart></app-empty-cart>
-}
+    }

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -9,5 +9,13 @@ import { RouterModule } from '@angular/router';
   styleUrl: './home.component.css'
 })
 export class HomeComponent {
+
+  showArrow = true;
+
+  @HostListener('window:scroll', ['$event'])
+  onWindowScroll() {
+    const yOffset = window.pageYOffset;
+    this.showArrow = yOffset < 150; // La flèche disparaît après avoir défilé de 150px
+  }
 
 }

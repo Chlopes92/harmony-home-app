@@ -11,6 +11,8 @@ import { LegalInformationComponent } from './pages/legal-information/legal-infor
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { GeneralConditionsComponent } from './pages/general-conditions/general-conditions.component';
 import { SubCategoryComponent } from './pages/sub-category/sub-category.component';
+import { DeliveryFormComponent } from './pages/delivery-form/delivery-form.component';
+import { PaymentFormComponent } from './pages/payment-form/payment-form.component';
 
 export const routes: Routes = [
     {
@@ -48,6 +50,14 @@ export const routes: Routes = [
     {
         path:"contact",
         component: ContactComponent
+    },
+    {
+        path:"delivery-form",
+        component: DeliveryFormComponent
+    },
+    {
+        path:"payment-form",
+        component: PaymentFormComponent
     },
     {
         path:"summery",

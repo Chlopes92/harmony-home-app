@@ -27,12 +27,14 @@ export class CartService {
     this.setCartToLocalStorage();
   }
 
-  changeQuantity(productId: string, quantity: number){
+  changeQuantity(productId: string, quantity: number) {
     let cartItem = this.cart.items.find(item => item.product.id === productId);
-    if(!cartItem) return;
-
+    if (!cartItem) return;
+  
     cartItem.quantity = quantity;
-    cartItem.price = quantity * cartItem.product.price;
+    // Calcul du nouveau prix avec arrondi à deux décimales
+    const updatedPrice = parseFloat((quantity * cartItem.product.price).toFixed(2));
+    cartItem.price = updatedPrice;
     this.setCartToLocalStorage();
   }
 
@@ -46,12 +48,9 @@ export class CartService {
   }
 
   private setCartToLocalStorage(): void {
-    this.cart.totalPrice = this.cart.items.reduce((prevSum, currentItem) => prevSum + currentItem.price, 0);
+    this.cart.totalPrice = this.cart.items.reduce((prevSum, currentItem) => parseFloat((prevSum + currentItem.price).toFixed(2)), 0);
     this.cart.totalCount = this.cart.items.reduce((prevSum, currentItem) => prevSum + currentItem.quantity, 0);
-
-    // Arrondi à deux décimales
-    // this.cart.totalPrice = Math.round(this.cart.totalPrice * 100) / 100;
-
+  
     const cartJson = JSON.stringify(this.cart);
     localStorage.setItem('Cart', cartJson);
     this.cartSubject.next(this.cart);
