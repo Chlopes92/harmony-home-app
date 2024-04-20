@@ -1,14 +1,39 @@
-<div class="container">
+<section class="container">
     @if(product.id){
-        <ul>
-            <li><img [src]="product.img_url" [alt]="product.title"></li>
-            <li><p>{{ product.title }}</p></li>
-            <li><p>{{product.price}}</p></li>
+    <ul>
+        <article>
+            <li><img class="img-product1" [src]="product.img_url" [alt]="product.title"></li>
+            <div class="img-detail">
+                <li><img class="img-product2" [src]="product.img_url" [alt]="product.title"></li>
+                <li><img class="img-product3" [src]="product.img_url" [alt]="product.title"></li>
+            </div>
+        </article>
+        <div class="container-text">
+            <li>
+                <h2>{{ product.title }}</h2>
+            </li>
+            <li>
+                <h3>{{product.price | currency: 'EUR'}}</h3>
+            </li>
+            <hr>
+            <li>
+                <p>Description du Produit </p>
+                <p>{{product.description}}</p>
+            </li>
             <li><button class="button-filled" (click)="addToCart()">Ajouter au panier</button></li>
             <li><button class="button-empty">Ajouter au favoris</button></li>
-            <li><p>{{product.description}}</p></li>
-            <li><p>{{product.dimension}}</p></li>
-            <li><p>{{product.features}}</p></li>
-        </ul>
+            <li>
+                <p>Dimension du Produit </p>
+                <p>+</p>
+                <p>{{product.dimension}}</p>
+            </li>
+            <li>
+                <p>Caractéristiques du Produit </p>
+                <p>+</p>
+                <p>{{product.features}}</p>
+            </li>
+            
+        </div>
+    </ul>
     }
-</div>
+</section>

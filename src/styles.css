@@ -18,18 +18,9 @@ a{
     cursor: pointer;
 }
 
-.flex{
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-}
-
-.column{
-    flex-direction: column;
-}
-
 p{
     font-family: 'Lora', serif;
+    font-size: 17px;
 }
 
 ::placeholder{
@@ -46,6 +37,10 @@ h1{
 
 h2{
     font-size: 32px;
+}
+
+h3{
+    font-size: 25px;
 }
 
 img{

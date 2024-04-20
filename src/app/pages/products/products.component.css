@@ -1,13 +1,23 @@
-img{
+.product-img{
     border-radius: 12px;
     box-shadow: 4px 5px 4px #ababab;
     width: 447px;
     height: 350px;
 }
 
+.favoris-img{
+    position: absolute;
+    margin-left: 24rem;
+}
+
 ul{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    grid-gap: 21px;
+    grid-gap: 2rem 3rem;
+    width: 95vw;
+    margin: auto;
+}
+
+p{
+    padding-top: 7.5px;
 }

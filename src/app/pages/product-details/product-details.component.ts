@@ -3,11 +3,12 @@ import { Product } from '../../shared/models/Product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product/product.service';
 import { CartService } from '../../services/cart/cart.service';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [],
+  imports: [CommonModule],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })

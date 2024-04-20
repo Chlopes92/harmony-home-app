@@ -1,0 +1,21 @@
+.img-product1{
+    height: 368.4px;
+    width: 758.87px;
+    border-radius: 12px;
+}
+
+.img-detail {
+    display: flex;
+    grid-gap: 15px;
+}
+
+.img-product2, .img-product3{
+    width: 23rem;
+    border-radius: 12px;
+
+}
+
+ul{
+    display: flex;
+    margin-top: 158px;
+}

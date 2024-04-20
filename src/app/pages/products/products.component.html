@@ -1,14 +1,17 @@
 <app-nav-category></app-nav-category>
-<div>
+<section>
     <ul>
         @for (product of products; track products){
         <li>
+            <a routerLink="/wishlist">
+                <img class="favoris-img" src="assets/icons/favoris.png" alt="">
+            </a>
             <a routerLink="/product-details/{{product.id}}">
-                <img [src]="product.img_url" [alt]="product.title">
+                <img class="product-img" [src]="product.img_url" [alt]="product.title">
             </a>
             <p>{{product.title}}</p>
             <p>{{product.price | currency: 'EUR'}}</p>
         </li>
         }
     </ul>
-</div>
+</section>

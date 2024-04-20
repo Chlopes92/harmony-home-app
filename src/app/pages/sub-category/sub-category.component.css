@@ -1,10 +1,15 @@
 ul{
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-evenly;
-    row-gap: 2rem;
+    grid-gap: 2rem 3rem;
+    width: 90vw;
+    margin: auto 4rem;
 }
 
 img{
-    box-shadow: 4px 2px 6px #ababab
+    box-shadow: 4px 2px 6px #ababab;
+}
+
+p{
+    padding-top: 10px;
 }
