@@ -1,1 +1,20 @@
-<p>payment-form works!</p>
+<section>
+    <article>
+        <form [formGroup]="paymentForm">
+            <div>
+                <input placeholder="Numéro*" class="input-without-border" type="text" id="card_number" formControlName="card_number" [class.hasError]="validationError.includes('card_number')">
+            </div>
+            <div>
+                <input placeholder="MM/AA*" class="input-without-border" type="text" id="card_expiration" formControlName="card_expiration" [class.hasError]="validationError.includes('card_expiration')">
+            </div>
+            <div>
+                <input placeholder="CVV*" class="input-without-border" type="text" id="card_cvv" formControlName="card_cvv" [class.hasError]="validationError.includes('card_cvv')">
+            </div>
+            <div>
+                <input placeholder="Nom Prénom*" class="input-without-border" type="text" id="card_name" formControlName="card_name" [class.hasError]="validationError.includes('card_name')">
+            </div>
+            
+            <button class="button-filled" type="submit" (click)="onPay()">Payer la commande</button>
+        </form>
+    </article>
+</section>

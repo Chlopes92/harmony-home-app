@@ -1,0 +1,9 @@
+article {
+    margin-top: 158px;
+    border-radius: 37px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+}

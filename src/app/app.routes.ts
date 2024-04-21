@@ -13,6 +13,12 @@ import { GeneralConditionsComponent } from './pages/general-conditions/general-c
 import { SubCategoryComponent } from './pages/sub-category/sub-category.component';
 import { DeliveryFormComponent } from './pages/delivery-form/delivery-form.component';
 import { PaymentFormComponent } from './pages/payment-form/payment-form.component';
+import { UserSpaceComponent } from './pages/user-space/user-space.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { NewPasswordComponent } from './pages/new-password/new-password.component';
+import { authGuard } from './guard/auth.guard';
+import { ConnectionComponent } from './pages/connection/connection.component';
+import { SignUpFormComponent } from './pages/sign-up-form/sign-up-form.component';
 
 export const routes: Routes = [
     {
@@ -41,7 +47,8 @@ export const routes: Routes = [
     },
     {
         path:"wishlist",
-        component: WishlistComponent
+        component: WishlistComponent,
+        canActivate: [authGuard]
     },
     {
         path:"cart",
@@ -53,15 +60,35 @@ export const routes: Routes = [
     },
     {
         path:"delivery-form",
-        component: DeliveryFormComponent
+        component: DeliveryFormComponent,
+        canActivate: [authGuard]
     },
     {
         path:"payment-form",
-        component: PaymentFormComponent
+        component: PaymentFormComponent,
+        canActivate: [authGuard]
     },
     {
         path:"summery",
-        component: SummeryComponent
+        component: SummeryComponent,
+        canActivate: [authGuard]
+    },
+    {
+        path:"user-space",
+        component: UserSpaceComponent,
+        canActivate: [authGuard]
+    },
+    {
+        path:"login",
+        component: ConnectionComponent
+    },
+    {
+        path:"sign-up",
+        component: SignUpFormComponent
+    },
+    {
+        path:"new-password",
+        component: NewPasswordComponent
     },
     {
         path:"legal-information",

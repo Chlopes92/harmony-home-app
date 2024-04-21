@@ -1,1 +1,39 @@
-<p>delivery-form works!</p>
+<section>
+    <article>
+        <form [formGroup]="deliveryForm">
+            <div>
+                <label for="delivery_name">*Nom</label>
+                <input class="input-without-border" type="text" id="delivery_name" formControlName="delivery_name" [class.hasError]="validationError.includes('delivery_name')">
+            </div>
+            <div>
+                <label for="delivery_firstname">*Prénom</label>
+                <input class="input-without-border" type="text" id="delivery_firstname" formControlName="delivery_firstname" [class.hasError]="validationError.includes('delivery_firstname')">
+            </div>
+            <div>
+                <label for="delivery_country">*Pays / Région</label>
+                <input class="input-without-border" type="text" id="delivery_country" formControlName="delivery_country" [class.hasError]="validationError.includes('delivery_country')">
+            </div>
+            <div>
+                <label for="delivery_street">*Adresse</label>
+                <input class="input-without-border" type="text" id="delivery_street" formControlName="delivery_street" [class.hasError]="validationError.includes('delivery_street')">
+            </div>
+            <div>
+                <label for="delivery_floor">Bat, étage, esc...</label>
+                <input class="input-without-border" type="text" id="delivery_floor" formControlName="delivery_floor" [class.hasError]="validationError.includes('delivery_floor')">
+            </div>
+            <div>
+                <label for="delivery_postcode">*Code Postal</label>
+                <input class="input-without-border" type="text" id="delivery_postcode" formControlName="delivery_postcode" [class.hasError]="validationError.includes('delivery_postcode')">
+            </div>
+            <div>
+                <label for="delivery_city">*Ville</label>
+                <input class="input-without-border" type="text" id="delivery_city" formControlName="delivery_city" [class.hasError]="validationError.includes('delivery_city')">
+            </div>
+            <div>
+                <label for="delivery_phone">*Téléphone</label>
+                <input class="input-without-border" type="text" id="delivery_phone" formControlName="delivery_phone" [class.hasError]="validationError.includes('delivery_phone')">
+            </div>
+            <button class="button-filled" type="submit" (click)="onDelivery()">Envoyer</button>
+        </form>
+    </article>
+</section>
