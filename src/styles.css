@@ -13,8 +13,6 @@
 }
 
 a{
-    text-decoration: none;
-    color: black;
     cursor: pointer;
 }
 
@@ -67,4 +65,26 @@ div,section,main,header,nav{
 
 li{
     list-style: none;
+}
+
+.button-filled {
+    border: none;
+    border-radius: 12px;
+    height: 45px;
+    background-color: var(--color-red);
+    color: white;
+}
+
+.input-without-border {
+    border-radius: 12px;
+    height: 44px;
+    width: 382px;
+    border: none;
+}
+
+.input-with-border {
+    border-radius: 12px;
+    height: 44px;
+    width: 382px;
+    border: var(--color-red) solid 2px;
 }

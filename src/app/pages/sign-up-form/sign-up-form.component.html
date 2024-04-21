@@ -1,0 +1,23 @@
+<section>
+    <article>
+        <h2>Nouveau client ?</h2>
+        <form [formGroup]="signUpForm">
+            <div>
+                <input class="input-with-border" placeholder="Prénom" type="text" id="firstname" formControlName="firstname" [class.hasError]="validationError.includes('firstname')">
+            </div> 
+            <div>
+                <input class="input-with-border" placeholder="Nom" type="text" id="name" formControlName="name" [class.hasError]="validationError.includes('name')">
+            </div>
+            <div>
+                <input class="input-with-border" placeholder="Email" type="text" id="name" formControlName="name" [class.hasError]="validationError.includes('name')">
+            </div>
+            <div>
+                <input class="input-with-border" placeholder="Mot de Passe" type="password" id="password" formControlName="password" [class.hasError]="validationError.includes('password')">
+            </div>
+            <div>
+                <input class="input-with-border" placeholder="Téléphone*" type="tel" id="phone" formControlName="phone" [class.hasError]="validationError.includes('phone')">
+            </div>
+            <button class="button-filled" type="submit" (click)="onSignUp">Valider</button>
+        </form>
+    </article>
+</section>

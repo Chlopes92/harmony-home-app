@@ -1,0 +1,16 @@
+<section>
+    <article>
+        <h2>Déjà client ?</h2>
+        <p>Connectez-vous pour donner vie à vos idées déco !</p>
+        <form [formGroup]="loginForm">
+            <div>
+                <input class="input-without-border" placeholder="Email" type="text" id="email" formControlName="email" [class.hasError]="validationError.includes('email')">
+            </div>
+            <div>
+                <input class="input-without-border" placeholder="Mot de passe" type="password" id="password" formControlName="password" [class.hasError]="validationError.includes('password')">
+            </div>
+            <p><a routerLink="/new-password">Mot de Passe oublié ?</a></p>
+            <button class="button-filled" type="submit" (click)="onLogin()">Se connecter</button>
+        </form>
+    </article>
+</section>
