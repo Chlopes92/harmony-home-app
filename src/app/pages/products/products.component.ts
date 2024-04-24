@@ -4,6 +4,7 @@ import { ActivatedRoute, RouterLink } from '@angular/router';
 import { Product } from '../../shared/models/Product';
 import { CommonModule } from '@angular/common';
 import { NavCategoryComponent } from '../../components/nav-category/nav-category.component';
+import { WishlistService } from '../../services/wishlist/wishlist.service';
 
 @Component({
   selector: 'app-products',
@@ -15,7 +16,7 @@ import { NavCategoryComponent } from '../../components/nav-category/nav-category
 export class ProductsComponent implements OnInit{
   products: Product[] = [];
 
-  constructor(private productService: ProductService, public activatedRoute: ActivatedRoute) {
+  constructor(private productService: ProductService, public activatedRoute: ActivatedRoute, private wishlistService: WishlistService) {
     // activatedRoute.params.subscribe((params) => {
     //   if(params['searchTerm'])
     //   this.products = this.productService.getAllProductBySearchTerm(params['searchTerm']);
@@ -34,6 +35,15 @@ export class ProductsComponent implements OnInit{
           this.products = data;
         });
       });
+
+  }
+
+  addToWishlist(product: Product) {
+    this.wishlistService.addToWishlist(product);
+  }
+
+  productInWishlist(productId: string): boolean {
+    return this.wishlistService.isInWishlist(productId);
   }
 
 }
