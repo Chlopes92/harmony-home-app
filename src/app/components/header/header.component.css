@@ -19,6 +19,10 @@ ul{
     align-items: center;
 }
 
+.menu {
+    grid-gap: 8rem;
+}
+
 span{
     background-color: var(--color-yellow);
     color: white;
@@ -31,12 +35,10 @@ span{
 
 .logo{
     height: 57px;
-    
 }
 
 .icon-nav{
-    display: flex;
-    flex-direction: row;
+    width: 10rem;
 }
 
 

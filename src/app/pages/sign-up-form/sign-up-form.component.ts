@@ -11,36 +11,51 @@ import { UserService } from '../../services/user/user.service';
   styleUrl: './sign-up-form.component.css'
 })
 export class SignUpFormComponent {
+  isCreated: boolean = false; 
   signUpForm!: FormGroup;
   validationError: string [] = [];
 
   constructor(private formBuilder: FormBuilder, private router: Router, private userService: UserService){}
 
-  initPaymenForm(){
+  ngOnInit() {
+    this.initSignUpForm();
+  }
+
+  initSignUpForm(){
     this.signUpForm = this.formBuilder.group({
-      firstname: [null, [Validators.required]],
-      name: [null, [Validators.required]],
-      email: [null, [Validators.required]],
-      password: [null, [Validators.required]],
-      phone: [null, [Validators.required]],
+      firstname: ['', [Validators.required]],
+      name: ['', [Validators.required]],
+      email: ['', [Validators.required]],
+      password: ['', [Validators.required]],
+      phone: ['', [Validators.required]],
     });
   }
 
-  onSignUp(){
-    this.validationError = [];
-    console.log(this.signUpForm.value);
-
-    if(this.signUpForm.invalid){
-      Object.keys(this.signUpForm.controls).forEach((input)=>{
-        const currentInput = this.signUpForm.get(input);
-        if(currentInput && currentInput.status === "INVALID"){
-          this.validationError.push(input);
-        }
-        // console.log(input,currentInput);
-      })
-      console.log(this.validationError)
-    }else{
-      this.router.navigate(['/user-space']);
-    }
+  onSignUp() {
+  if (this.signUpForm.invalid) {
+    console.log('Formulaire invalide', this.signUpForm.errors);
+    alert('Erreur lors de la création du compte');
+    return; // Arrête l'exécution si le formulaire est invalide
   }
+
+  const formData = this.signUpForm.value;
+  this.signUp(formData.name, formData.firstname, formData.email, formData.password, formData.phone);
+}
+
+signUp(name: string, firstname: string, email: string, password: string, phone: string) {
+  this.userService.signup(name, firstname, email, password, phone).subscribe({
+    next: (data) => {
+      console.log("Utilisateur créé avec succès", data);
+      this.isCreated = true;
+      alert('Compte crée avec succès');
+
+      const redirectUrl = localStorage.getItem('redirectUrl') || '/user-space';
+        this.router.navigate([redirectUrl]);
+        localStorage.removeItem('redirectUrl'); // Nettoyer après la redirection
+    },
+    error: (error) => {
+      console.error("Erreur lors de la création de l'utilisateur", error);
+    }
+  });
+}
 }

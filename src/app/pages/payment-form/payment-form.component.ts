@@ -21,10 +21,10 @@ export class PaymentFormComponent {
 
   initPaymenForm(){
     this.paymentForm = this.formBuilder.group({
-      card_number: [null, [Validators.required]],
-      card_expiration: [null, [Validators.required]],
-      card_cvv: [null, [Validators.required]],
-      card_name: [null, [Validators.required]]
+      card_number: ['', [Validators.required]],
+      card_expiration: ['', [Validators.required]],
+      card_cvv: ['', [Validators.required]],
+      card_name: ['', [Validators.required]]
     });
   }
 
