@@ -4,4 +4,4 @@ export const CATEGORY_URL = `${BASE_URL}/api/category/`;
 export const SUB_CATEGORY_URL = `${BASE_URL}/api/sub-category/`;
 export const  PRODUCTS_URL = `${BASE_URL}/api/product/by-sub-category/`;
 export const PRODUCT_BY_ID_URL = `${BASE_URL}/api/product/`;
-export const LOGIN_URL = `${BASE_URL}/api/users/login`;
+export const USER_URL = `${BASE_URL}/api/users/`;

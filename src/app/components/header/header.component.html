@@ -1,40 +1,45 @@
 <header>
     <nav>
-        <ul>
+        <ul class="menu">
+            @if(!displayElement){
             <li>
                 <app-search-bar></app-search-bar>
             </li>
+            }
             <li>
                 <a routerLink="/">
                     <img class="logo" src="/assets/icons/logo.png" alt="retour à l'accueil">
                 </a>
             </li>
-
+            @if(!displayElement){
             <div class="icon-nav">
-            <li>
-                <a routerLink="/contact">
-                    <img src="/assets/icons/info.png" alt="contact">
-                </a>
-            </li>
-            <li>
-                <a routerLink="/wishlist">
-                    <img src="/assets/icons/nav-favoris.png" alt="wishlist">
-                </a>
-            </li>
-            <li>
-                <a routerLink="/user-space">
-                    <img src="/assets/icons/user.png" alt="espace utilisateur">
-                </a>
-            </li>
-            <li>
-                <a routerLink="/cart">
-                    <img src="/assets/icons/shopping.png" alt="panier">
-                    @if(cart && cart.items.length){
-                        <span>{{cart.totalCount}}</span>
-                    }
-                </a>
-            </li>
+                <ul>
+                    <li>
+                        <a routerLink="/contact">
+                            <img src="/assets/icons/info.png" alt="contact">
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/wishlist">
+                            <img src="/assets/icons/nav-favoris.png" alt="wishlist">
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/user-space">
+                            <img src="/assets/icons/user.png" alt="espace utilisateur">
+                        </a>
+                    </li>
+                    <li>
+                        <a routerLink="/cart">
+                            <img src="/assets/icons/shopping.png" alt="panier">
+                            @if(cart && cart.items.length){
+                            <span>{{cart.totalCount}}</span>
+                            }
+                        </a>
+                    </li>
+                </ul>
             </div>
+            }
         </ul>
     </nav>
 </header>

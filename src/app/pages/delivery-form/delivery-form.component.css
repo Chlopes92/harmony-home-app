@@ -2,3 +2,8 @@ article {
     margin-top: 158px;
     background-color: var(--color-dew)
 }
+
+label{
+    display: flex;
+    flex-direction: column;
+}

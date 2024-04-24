@@ -1,1 +1,20 @@
-<p>wishlist works!</p>
+@if(wishlist && wishlist.length){
+    <section>
+        <h2>Ma Liste de Souhaits</h2>
+        <ul>
+            @for(product of wishlist; track product){
+                <li>
+                    <div>
+                      <img [src]="product.img_url" [alt]="product.title">
+                      <p>{{ product.title }}</p>
+                      <button (click)="removeFromWishlist(product)">Retirer</button>
+                    </div>
+                  </li>
+            }
+        </ul>
+        <button (click)="clearWishlist()">Vider la liste de souhaits</button>
+      </section>
+}
+@else {
+    <app-empty-wishlist></app-empty-wishlist>
+}

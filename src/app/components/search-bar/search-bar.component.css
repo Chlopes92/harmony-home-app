@@ -1,7 +1,7 @@
 input{
     border-radius: 12px;
     height: 44px;
-    width: 382px;
+    width: 23rem;
     border: none;
 }
 
@@ -13,7 +13,3 @@ button{
     bottom: -0.6rem;
 }
 
-::placeholder {
-    padding: 1rem; /* Fixe ou vous pouvez aussi utiliser clamp() si nécessaire */
-    font-size: clamp(14px, 2vw, 16px); /* S'ajuste entre 14px et 16px en fonction de la largeur de la fenêtre */
-}

@@ -88,3 +88,16 @@ li{
     width: 382px;
     border: var(--color-red) solid 2px;
 }
+
+input:focus {
+    outline: none;
+    padding: 1rem;
+} 
+
+input {
+    padding: 1rem;
+}
+
+::placeholder {
+    font-size: clamp(14px, 2vw, 16px); /* S'ajuste entre 14px et 16px en fonction de la largeur de la fenêtre */
+}
