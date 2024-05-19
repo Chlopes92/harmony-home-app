@@ -6,7 +6,6 @@ import { ProductDetailsComponent } from './pages/product-details/product-details
 import { CartComponent } from './pages/cart/cart.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { WishlistComponent } from './pages/wishlist/wishlist.component';
-import { SummeryComponent } from './pages/summery/summery.component';
 import { LegalInformationComponent } from './pages/legal-information/legal-information.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { GeneralConditionsComponent } from './pages/general-conditions/general-conditions.component';
@@ -19,6 +18,7 @@ import { NewPasswordComponent } from './pages/new-password/new-password.componen
 import { authGuard } from './guard/auth.guard';
 import { ConnectionComponent } from './pages/connection/connection.component';
 import { SignUpFormComponent } from './pages/sign-up-form/sign-up-form.component';
+import { SummaryComponent } from './pages/summary/summary.component';
 
 export const routes: Routes = [
     {
@@ -69,8 +69,8 @@ export const routes: Routes = [
         canActivate: [authGuard]
     },
     {
-        path:"summery",
-        component: SummeryComponent,
+        path:"summary",
+        component: SummaryComponent,
         canActivate: [authGuard]
     },
     {
