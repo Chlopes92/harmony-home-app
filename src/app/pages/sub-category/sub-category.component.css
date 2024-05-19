@@ -1,9 +1,10 @@
 ul{
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 2rem 3rem;
+    grid-gap: 3rem 2rem;
     width: 90vw;
-    margin: auto 4rem;
+    margin: auto;
+    justify-content: center;
 }
 
 img{
@@ -12,4 +13,15 @@ img{
 
 p{
     padding-top: 10px;
+}
+
+.style-image {
+    transition: transform 0.5s ease; /* Transition douce pour l'effet de zoom */
+    display: block; /* Pour éviter des problèmes d'espacement sous l'image */
+    width: 100%; /* Assure que l'image s'adapte à la largeur de son conteneur */
+    
+}
+
+.style-item:hover .style-image{
+    transform: scale(1.05); /* Zoom légèrement sur l'image au survol */
 }
