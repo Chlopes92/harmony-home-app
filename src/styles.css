@@ -12,7 +12,7 @@
     box-sizing: border-box;
 }
 
-a{
+a, button{
     cursor: pointer;
 }
 
@@ -73,6 +73,15 @@ li{
     height: 45px;
     background-color: var(--color-red);
     color: white;
+    font-weight: bold;
+}
+
+.button-empty{
+    border: var(--color-red) solid 2px;
+    border-radius: 12px;
+    height: 45px;
+    color: var(--color-red);
+    font-weight: bold;
 }
 
 .input-without-border {
