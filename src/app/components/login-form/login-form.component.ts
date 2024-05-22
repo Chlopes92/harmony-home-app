@@ -46,7 +46,7 @@ export class LoginFormComponent implements OnInit {
           this.checkPendingWishlistProduct();
         },
         error: error => {
-          alert('Erreur lors de la connexion');
+          alert('Email ou mot de passe incorrect');
         }
       });
     }
