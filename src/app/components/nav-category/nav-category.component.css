@@ -1,4 +1,4 @@
-.nav-category{
+.nav-category {
     margin-top: 158px;
     font-size: 12px;
     text-align: center;
@@ -9,17 +9,21 @@
     padding-bottom: 4rem;
 }
 
-.item:hover .style-icon, .style-icon-active {
-    border-bottom: solid black 3px;
-    font-weight: bold;
-
+.item .style-icon {
+    border-bottom: solid transparent 3px; /* Réserve l'espace pour le bord */
+    transition: border-color 0.3s ease, font-weight 0.3s ease;
 }
 
-a{
+.item.style-icon-active .style-icon {
+    border-bottom: solid black 3px;  /* Assurez-vous que le bord est visible */
+    font-weight: bold;
+}
+
+a {
     color: black;
     text-decoration: none;
 }
 
-p{
+p {
     font-size: 12px;
 }

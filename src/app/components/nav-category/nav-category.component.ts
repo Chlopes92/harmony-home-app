@@ -9,22 +9,26 @@ import { CommonModule } from '@angular/common';
   standalone: true,
   imports: [RouterLink, CommonModule],
   templateUrl: './nav-category.component.html',
-  styleUrl: './nav-category.component.css'
+  styleUrls: ['./nav-category.component.css']
 })
-export class NavCategoryComponent implements OnInit{
+export class NavCategoryComponent implements OnInit {
   categories: Category[] = [];
   activeCategoryId!: string;
 
   constructor(private categoryService: CategoryService, private activatedRoute: ActivatedRoute) { }
 
-  ngOnInit(){
+  ngOnInit() {
     this.categoryService.getCategories().subscribe((data: Category[]) => {
       console.log('category: ', data);
       this.categories = data;
-    })
 
-    this.activatedRoute.params.subscribe(params => {
-      this.activeCategoryId = params['id']; 
+      // Ajoutez ceci pour appliquer la catégorie active par défaut après le chargement des catégories
+      const storedCategoryId = localStorage.getItem('activeCategory');
+      if (storedCategoryId && this.categories.some(category => category.id === storedCategoryId)) {
+        this.activeCategoryId = storedCategoryId;
+      } else if (this.categories.length > 0) {
+        this.activeCategoryId = this.categories[0].id; // Sélectionner la première catégorie si aucune catégorie active n'est trouvée
+      }
     });
   }
 
@@ -32,9 +36,13 @@ export class NavCategoryComponent implements OnInit{
     return this.activeCategoryId === categoryId;
   }
 
+  onCategoryClick(categoryId: string): void {
+    localStorage.setItem('activeCategory', categoryId);
+    this.activeCategoryId = categoryId;
+  }
+
   slugRoute(categoryName: string): string {
     const slug = categoryName.replace(/ /g, '-').toLowerCase();
     return `/category/${slug}`;
   }
-
 }
