@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Observable, map } from 'rxjs';
+import { PRODUCTS_URL, PRODUCT_BY_ID_URL, PRODUCT_BY_SEARCH_URL } from '../../shared/constants/urls';
 import { ApiResponse, OtherResponse, Product } from '../../shared/models/Product';
-import { PRODUCTS_URL, PRODUCT_BY_ID_URL } from '../../shared/constants/urls';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +23,8 @@ export class ProductService {
     );
   }
 
-  // getAllProductBySearchTerm(searchTerm: string){
-  //   return this.getAll().filter(product => product.title.toLowerCase().includes(searchTerm.toLowerCase()));
-  // }
+  getProductBySearchTerm(title: string): Observable<Product[]> {
+    return this.http.get<Product[]>(`${PRODUCT_BY_SEARCH_URL}${title}`)
+  }
 
 }
