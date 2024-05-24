@@ -1,5 +1,6 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
+import { ProductService } from '../../services/product/product.service';
 
 @Component({
   selector: 'app-search-bar',
@@ -10,6 +11,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 })
 export class SearchBarComponent implements OnInit, OnDestroy {
   searchTerm: string = '';
+  
   dynamicPlaceholder: string = 'Je cherche...';
   phrases: string[] = [
     'Je cherche un canapé...',
@@ -22,7 +24,7 @@ export class SearchBarComponent implements OnInit, OnDestroy {
   typingIndex: number = 0;
   intervalId: number | undefined;
 
-  constructor(private activatedRoute: ActivatedRoute, private router: Router) {
+  constructor(private activatedRoute: ActivatedRoute, private router: Router, private productService: ProductService) {
     activatedRoute.params.subscribe((params) => {
       if (params['searchTerm']) this.searchTerm = params['searchTerm'];
     });

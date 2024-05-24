@@ -1,14 +1,23 @@
 <footer>
     <section class="overlapping-section">
-        <div class="container-text-footer">
-            <a href="#">
-                <img class="logo-footer" src="/assets/icons/logo-footer.png" alt="Retour à la page d'accueil" />
-            </a>
-            <h3>
-                Restez informé des tendances actuelles et des offres exclusives.
-            </h3>
-            <h4>Abonnez-vous à notre newsletter</h4>
-            <input type="email" placeholder="Entrez votre adresse mail" />
+        <div class="container-footer">
+            <div class="container-text">
+                <a href="#">
+                    <img class="logo-footer" src="/assets/icons/logo-footer.png" alt="Retour à la page d'accueil" />
+                </a>
+                <div>
+                    <h3>
+                        Restez informé des tendances actuelles et des offres exclusives.
+                    </h3>
+                    <h4>Abonnez-vous à notre newsletter</h4>
+                    <form>
+                        <input class="newsletter-input" type="email" placeholder="Entrez votre adresse mail" />
+                        <button type="submit">
+                            <img src="assets/icons/mail.png" alt="S'abonner à la newsletter">
+                        </button>
+                    </form>
+                </div>
+            </div>
 
             <hr />
             <a routerLink="">
@@ -36,38 +45,39 @@
                     <img src="/assets/icons/linkedin-logo.png" alt="Accès à notre compte linkedin" />
                 </button>
             </a>
+            <div class="container-nav-footer">
+                <p>© HarmonyHome 2024</p>
 
-            <p>© HarmonyHome 2024</p>
-
-            <nav>
-                <ul>
-                    <li>
-                        <p>
-                            <a routerLink="/legal-information">Mentions légales</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a routerLink="/privacy-policy">Politiques de confidentialité</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a routerLink="/general-conditions-of-sale">CGV</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a routerLink="/contact">Contact</a>
-                        </p>
-                    </li>
-                    <li>
-                        <p>
-                            <a routerLink="/contact">Service après-vente</a>
-                        </p>
-                    </li>
-                </ul>
-            </nav>
+                <nav>
+                    <ul class="nav-footer">
+                        <li>
+                            <p>
+                                <a routerLink="/legal-information">Mentions légales</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a routerLink="/privacy-policy">Politiques de confidentialité</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a routerLink="/general-conditions-of-sale">CGV</a>
+                            </p>
+                        </li>
+                        <li>
+                            <p>
+                                <a routerLink="/contact">Contact</a>
+                            </p>
+                        </li>
+                        <li class="no-border">
+                            <p>
+                                <a routerLink="/contact">Service après-vente</a>
+                            </p>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
         </div>
 
         <div class="footer-background">

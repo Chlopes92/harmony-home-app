@@ -24,17 +24,46 @@ a {
     pointer-events: none;
 }
 
-.container-text-footer{
+.container-footer{
     position: absolute;
     z-index: 2;
     text-shadow: 2px 5px 6px rgba(0, 0, 0, 0.25);
     color: white;
 }
 
+.container-text{
+    display: flex;
+}
 
+.nav-footer{
+    display: flex;
+    justify-content: center;
+}
 
+.nav-footer > li {
+    border-right: solid 2px white;
+}
 
+.no-border{
+    border-right: none !important;
+}
 
+.container-nav-footer{
+    display: flex;
+}
 
+.newsletter-input{
+    background-color: transparent;
+    border: white solid 1px;
+}
 
+::placeholder{
+    color: white;
+}
 
+.container-footer > a > button {
+    border: solid 1px var(--color-yellow);
+    border-radius: 50px;
+    height: 50px;
+    width: 50px;
+}
