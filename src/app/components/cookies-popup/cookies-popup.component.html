@@ -1,0 +1,17 @@
+<div class="popup-overlay" *ngIf="showPopup">
+  <div class="cookie-popup">
+    <img src="assets/img/cookies.png" alt="Cookie Image">
+    <h2>Acceptez-vous nos délicieux cookies ?</h2>
+    <p>
+      Nous utilisons des cookies pour améliorer votre expérience de navigation sur notre site Web. En cliquant sur <strong>"Accepter"</strong>, vous consentez à l'utilisation de tous les cookies. Pour plus d'informations sur l'utilisation des cookies, veuillez consulter notre <strong>politique de cookies</strong>.
+    </p>
+    <div class="button-container">
+      <button class="button-filled" (click)="acceptCookies()">
+        <p>Accepter</p>
+      </button>
+      <button class="button-outline" (click)="declineCookies()">
+        <p>Refuser</p>
+      </button>
+    </div>
+  </div>
+</div>
