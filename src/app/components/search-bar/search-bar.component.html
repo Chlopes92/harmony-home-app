@@ -1,8 +1,7 @@
-<div>
+<div class="search-container">
     <input #s type="text" [placeholder]="dynamicPlaceholder"
-    (keyup.enter)="search(s.value)"
-    [value]="searchTerm">
-    <button (click)="search(s.value)">
+        (keyup.enter)="search(s.value)" [value]="searchTerm" class="search-input">
+    <button (click)="search(s.value)" class="search-button">
         <img src="/assets/icons/search.png" alt="recherche">
     </button>
 </div>

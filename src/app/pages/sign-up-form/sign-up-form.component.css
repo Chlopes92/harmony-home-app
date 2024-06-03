@@ -1,9 +1,69 @@
+/* Styles pour le composant d'inscription */
 article {
-    margin-top: 158px;
     border-radius: 37px;
+    padding: 2rem; /* Ajout de padding pour l'espacement interne */
+    border: 2px solid var(--color-red); /* Ajouter une bordure */
+    background-color: white; /* Assurer le fond blanc */
+    max-width: 78%; /* Largeur maximale pour limiter l'expansion */
+    margin: 158px auto; /* Centrer l'article */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajouter une ombre pour un effet d'élévation */
+}
+
+article h2 {
+    margin-bottom: 20px; /* Espace sous le titre */
+    font-size: 24px; /* Ajuster la taille du titre */
+}
+
+.input-with-border {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 65rem; /* Largeur maximale pour limiter l'expansion */
+    border: var(--color-red) solid 2px;
+    padding: 1rem;
+    margin-bottom: 15px;
+}
+
+.password-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+
+button.button-filled {
+    border: none;
+    border-radius: 12px;
+    padding: 0 1rem; /* Ajout de padding horizontal */
+    height: 45px;
+    background-color: var(--color-red);
+    color: white;
+    font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
+    margin-top: 20px; /* Espace entre les champs et le bouton */
+}
+
+button.button-filled:hover {
+    background-color: darken(var(--color-red), 10%);
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    
+}
+
+/* Correction du positionnement du toggle password */
+form div {
+    position: relative;
+    width: 100%;
+    max-width: 65rem;
 }
