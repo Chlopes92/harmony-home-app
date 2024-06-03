@@ -1,4 +1,4 @@
-:root{
+:root {
     --color-brown: #5E2119;
     --color-red: #4D0B0A;
     --color-dew: #EAE1DF;
@@ -6,38 +6,38 @@
     --color-mole: #B59F9A;
 }
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-a, button{
+a, button {
     cursor: pointer;
 }
 
-p{
+p {
     font-family: 'Lora', serif;
     font-size: 17px;
 }
 
-::placeholder{
+::placeholder {
     font-family: 'Lora', serif;
 }
 
-h1, h2, h3, h4{
+h1, h2, h3, h4 {
     font-family: 'Cormorant Unicase', serif;
 }
 
-h1{
+h1 {
     font-size: 36px;
 }
 
-h2{
+h2 {
     font-size: 32px;
 }
 
-h3{
+h3 {
     font-size: 25px;
 }
 
@@ -45,59 +45,82 @@ h4 {
     font-size: 17px;
 }
 
-img{
+img {
     object-fit: cover;
 }
 
-/* .button-filled{}
-.button-empty{} */
-
-div,section,main,header,nav{
+div, section, main, header, nav {
     border: 2px solid transparent;
 }
 
-li{
+li {
     list-style: none;
 }
 
 .button-filled {
     border: none;
     border-radius: 12px;
+    padding: 0 1rem; /* Ajout de padding horizontal */
     height: 45px;
     background-color: var(--color-red);
     color: white;
     font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease;
 }
 
-.button-empty{
+.button-filled:hover {
+    background-color: var(--color-yellow);
+}
+
+.button-empty {
     border: var(--color-red) solid 2px;
     border-radius: 12px;
+    padding: 0 1rem; /* Ajout de padding horizontal */
     height: 45px;
     color: var(--color-red);
     font-weight: bold;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.button-empty:hover {
+    background-color: var(--color-red);
+    color: white;
 }
 
 .input-without-border {
     border-radius: 12px;
     height: 44px;
-    width: 382px;
+    width: 100%; /* Pour s'adapter à la largeur du conteneur parent */
+    max-width: 382px; /* Largeur maximale pour limiter l'expansion */
     border: none;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .input-with-border {
     border-radius: 12px;
     height: 44px;
-    width: 382px;
+    width: 100%; /* Pour s'adapter à la largeur du conteneur parent */
+    max-width: 382px; /* Largeur maximale pour limiter l'expansion */
     border: var(--color-red) solid 2px;
+    padding: 1rem;
 }
 
 input:focus {
     outline: none;
-    padding: 1rem;
-} 
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
 
 input {
     padding: 1rem;
+    font-size: 16px; /* Assurez-vous que le texte est lisible */
+    transition: box-shadow 0.3s ease;
 }
 
 ::placeholder {
