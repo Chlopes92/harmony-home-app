@@ -31,25 +31,6 @@ article h2 {
     cursor: pointer;
 }
 
-button.button-filled {
-    border: none;
-    border-radius: 12px;
-    padding: 0 1rem; /* Ajout de padding horizontal */
-    height: 45px;
-    background-color: var(--color-red);
-    color: white;
-    font-weight: bold;
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    transition: background-color 0.3s ease;
-    margin-top: 20px; /* Espace entre les champs et le bouton */
-}
-
-button.button-filled:hover {
-    background-color: darken(var(--color-red), 10%);
-}
-
 input:focus {
     outline: none;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);

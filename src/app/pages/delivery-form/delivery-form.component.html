@@ -7,9 +7,11 @@
                 <div class="step-icon">✔</div>
                 <p>Validation du panier</p>
                 <ul class="cart-items">
-                    <li *ngFor="let cartItem of cart.items">
+                    @for(cartItem of cart.items; track cart.items){
+                    <li>
                         <img class="product-img" [src]="cartItem.product.img_url" [alt]="cartItem.product.title">
                     </li>
+                    }
                 </ul>
             </div>
             <div class="step">
@@ -24,58 +26,112 @@
 
         <!-- Formulaire de Livraison -->
         <article class="delivery-section">
-            <form [formGroup]="deliveryForm">
+            <form [formGroup]="deliveryForm" (ngSubmit)="onDelivery()">
                 <div class="input-short">
                     <div class="form-group">
                         <label for="delivery_name">*Nom</label>
-                        <input class="input-without-border" type="text" id="delivery_name"
-                            formControlName="delivery_name"
-                            [class.hasError]="validationError.includes('delivery_name')">
+                        <input class="input-without-border" type="text" id="delivery_name" formControlName="delivery_name">
+                        @if(submitted && deliveryForm.controls['delivery_name'].invalid){
+                        <div class="error">
+                            @if(deliveryForm.controls['delivery_name'].errors?.['required']){
+                            <div>Le nom est requis.</div>
+                            }
+                        </div>
+                        }
                     </div>
                     <div class="form-group">
                         <label for="delivery_firstname">*Prénom</label>
-                        <input class="input-without-border" type="text" id="delivery_firstname"
-                            formControlName="delivery_firstname"
-                            [class.hasError]="validationError.includes('delivery_firstname')">
+                        <input class="input-without-border" type="text" id="delivery_firstname" formControlName="delivery_firstname">
+                        @if(submitted && deliveryForm.controls['delivery_name'].invalid){
+                        <div class="error">
+                        @if(deliveryForm.controls['delivery_firstname'].errors?.['required']){
+                            <div>Le prénom est requis.</div>
+                        }
+                        @if(deliveryForm.controls['delivery_firstname'].errors?.['pattern']){
+                            <div>Le prénom n'est pas valide.</div>
+                        }
+                        </div>
+                        }
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="delivery_country">*Pays / Région</label>
-                    <input class="input-without-border" type="text" id="delivery_country"
-                        formControlName="delivery_country"
-                        [class.hasError]="validationError.includes('delivery_country')">
+                    <select class="input-without-border" id="delivery_country" formControlName="delivery_country">
+                    @for(country of countries; track countries){
+                        <option [value]="country">{{ country }}</option>
+                    }
+                    </select>
+                    @if(submitted && deliveryForm.controls['delivery_country'].invalid){
+                    <div class="error">
+                    @if(deliveryForm.controls['delivery_country'].errors?.['required']){
+                        <div>Le pays est requis.</div>
+                    }
+                    </div>
+                }
                 </div>
                 <div class="form-group">
                     <label for="delivery_street">*Adresse</label>
-                    <input class="input-without-border" type="text" id="delivery_street"
-                        formControlName="delivery_street"
-                        [class.hasError]="validationError.includes('delivery_street')">
+                    <input class="input-without-border" type="text" id="delivery_street" formControlName="delivery_street">
+                    @if(submitted && deliveryForm.controls['delivery_street'].invalid){
+                    <div class="error">
+                        @if(deliveryForm.controls['delivery_street'].errors?.['required']){
+                        <div>L'adresse est requise.</div>
+                        }
+                        @if(deliveryForm.controls['delivery_street'].errors?.['pattern']){
+                        <div>L'adresse n'est pas valide.</div>
+                        }
+                    </div>
+                    }
                 </div>
                 <div class="form-group">
                     <label for="delivery_floor">Bat, étage, esc...</label>
-                    <input class="input-without-border" type="text" id="delivery_floor" formControlName="delivery_floor"
-                        [class.hasError]="validationError.includes('delivery_floor')">
+                    <input class="input-without-border" type="text" id="delivery_floor" formControlName="delivery_floor">
                 </div>
                 <div class="input-short">
                     <div class="form-group">
                         <label for="delivery_postcode">*Code Postal</label>
-                        <input class="input-without-border" type="text" id="delivery_postcode"
-                            formControlName="delivery_postcode"
-                            [class.hasError]="validationError.includes('delivery_postcode')">
+                        <input class="input-without-border" type="text" id="delivery_postcode" formControlName="delivery_postcode">
+                        @if(submitted && deliveryForm.controls['delivery_postcode'].invalid){
+                        <div class="error">
+                            @if(deliveryForm.controls['delivery_postcode'].errors?.['required']){
+                            <div>Le code postal est requis.</div>
+                            }
+                            @if(deliveryForm.controls['delivery_postcode'].errors?.['pattern']){
+                            <div>Le code postal n'est pas valide.</div>
+                            }
+                        </div>
+                        }
                     </div>
                     <div class="form-group">
                         <label for="delivery_city">*Ville</label>
-                        <input class="input-without-border" type="text" id="delivery_city"
-                            formControlName="delivery_city"
-                            [class.hasError]="validationError.includes('delivery_city')">
+                        <input class="input-without-border" type="text" id="delivery_city" formControlName="delivery_city">
+                        @if(submitted && deliveryForm.controls['delivery_city'].invalid){
+                        <div class="error">
+                            @if(deliveryForm.controls['delivery_city'].errors?.['required']){
+                            <div>La ville est requise.</div>
+                            }
+                            @if(deliveryForm.controls['delivery_city'].errors?.['pattern']){
+                            <div>La ville n'est pas valide.</div>
+                            }
+                        </div>
+                        }
                     </div>
                 </div>
                 <div class="form-group">
                     <label for="delivery_phone">*Téléphone</label>
-                    <input class="input-without-border" type="text" id="delivery_phone" formControlName="delivery_phone"
-                        [class.hasError]="validationError.includes('delivery_phone')">
+                    <input class="input-without-border" type="text" id="delivery_phone" formControlName="delivery_phone">
+                    @if(submitted && deliveryForm.controls['delivery_phone'].invalid){
+                    <div class="error">
+                        @if(deliveryForm.controls['delivery_phone'].errors?.['required']){
+                        <div>Le téléphone est requis.</div>
+                        }
+                        @if(deliveryForm.controls['delivery_phone'].errors?.['pattern']){
+                        <div>Le téléphone n'est pas valide.</div>
+                        }
+                    </div>
+                    }
                 </div>
-                <button class="button-filled" type="submit" (click)="onDelivery()">Envoyer</button>
+                <button class="button-filled" type="submit">Envoyer</button>
             </form>
         </article>
     </div>
