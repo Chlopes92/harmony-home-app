@@ -1,20 +1,53 @@
+<!-- payment-form.component.html -->
 <section>
-    <article>
-        <form [formGroup]="paymentForm">
-            <div>
-                <input placeholder="Numéro*" class="input-without-border" type="text" id="card_number" formControlName="card_number" [class.hasError]="validationError.includes('card_number')">
+    <div class="form-container">
+        <!-- Stepper -->
+        <div class="stepper">
+            <div class="step active">
+                <div class="step-icon">✔</div>
+                <p>Validation du panier</p>
+                <ul class="cart-items">
+                    @for(cartItem of cart.items; track cart.items){
+                    <li>
+                        <img class="product-img" [src]="cartItem.product.img_url" [alt]="cartItem.product.title">
+                    </li>
+                    }
+                </ul>
             </div>
-            <div>
-                <input placeholder="MM/AA*" class="input-without-border" type="text" id="card_expiration" formControlName="card_expiration" [class.hasError]="validationError.includes('card_expiration')">
+            <div class="step active">
+                <div class="step-icon">✔</div>
+                <p>Livraison</p>
             </div>
-            <div>
-                <input placeholder="CVV*" class="input-without-border" type="text" id="card_cvv" formControlName="card_cvv" [class.hasError]="validationError.includes('card_cvv')">
+            <div class="step">
+                <div class="step-icon">3</div>
+                <p>Paiement</p>
             </div>
-            <div>
-                <input placeholder="Nom Prénom*" class="input-without-border" type="text" id="card_name" formControlName="card_name" [class.hasError]="validationError.includes('card_name')">
-            </div>
-            
-            <button class="button-filled" type="submit" (click)="onPay()">Payer la commande</button>
-        </form>
-    </article>
+        </div>
+
+        <!-- Formulaire de Paiement -->
+        <article class="payment-section">
+            <form [formGroup]="paymentForm" (ngSubmit)="onPay()">
+                <div class="form-group">
+                    <label for="card_number">Numéro*</label>
+                    <input placeholder="Numéro*" class="input-without-border" type="text" id="card_number" formControlName="card_number" [class.hasError]="validationError.includes('card_number')">
+                </div>
+                <div class="input-short">
+                    <div class="form-group">
+                        <label for="card_expiration">MM/AA*</label>
+                        <input placeholder="MM/AA*" class="input-without-border" type="text" id="card_expiration" formControlName="card_expiration" [class.hasError]="validationError.includes('card_expiration')">
+                    </div>
+                    <div class="form-group">
+                        <label for="card_cvv">CVV*</label>
+                        <input placeholder="CVV*" class="input-without-border" type="text" id="card_cvv" formControlName="card_cvv" [class.hasError]="validationError.includes('card_cvv')">
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label for="card_name">Nom Prénom*</label>
+                    <input placeholder="Nom Prénom*" class="input-without-border" type="text" id="card_name" formControlName="card_name" [class.hasError]="validationError.includes('card_name')">
+                </div>
+                
+                <button class="button-filled" type="submit">Payer la commande</button>
+            </form>
+        </article>
+    </div>
 </section>

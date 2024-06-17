@@ -1,4 +1,103 @@
-article {
+/* payment-form.component.css */
+.form-container {
     margin-top: 158px;
-    background-color: var(--color-dew)
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    border-radius: 12px;
+    width: 100%;
+}
+
+article {
+    background-color: var(--color-dew);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+label {
+    display: flex;
+    flex-direction: column;
+}
+
+.stepper {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    width: 50%; /* Ajusté pour éviter le chevauchement */
+}
+
+.step {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-bottom: 60px; /* Ajustement de l'espacement entre les étapes */
+    position: relative;
+    padding-left: 48px; /* Ajustement pour l'espacement avec les cercles */
+}
+
+.step-icon {
+    width: 96px;
+    height: 96px;
+    border-radius: 50%;
+    background-color: var(--color-brown);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1; /* Pour que l'icône soit au-dessus du trait */
+}
+
+.step.active .step-icon {
+    background-color: var(--color-yellow);
+}
+
+.step:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    left: 48px;
+    top: 96px;
+    width: 2px;
+    height: calc(100% - 0px); /* Ajusté pour que le trait touche le cercle suivant */
+    background-color: var(--color-mole);
+    animation: draw-line 1s ease-in-out forwards; /* Animation du trait */
+}
+
+@keyframes draw-line {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: calc(100% - 0px);
+    }
+}
+
+.step p {
+    margin: 0;
+    margin-left: 70px; /* Align the text with the step content */
+    padding-top: 30px; /* Ajouter un espace entre l'icône et le texte */
+}
+
+.cart-items {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 8%;
+    margin-bottom: -7%;
+    margin-left: 70px;
+}
+
+.product-img {
+    width: 94px;
+    height: 96px;
+    border-radius: 4px;
+}
+
+.payment-section {
+    flex-grow: 1;
+    width: 55%; /* Ajusté pour éviter le chevauchement */
+    border-radius: 37px;
 }
