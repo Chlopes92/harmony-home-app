@@ -3,6 +3,10 @@ export interface LoginResponse {
     user: User;
 }
 
+export interface DeleteAccountResponse {
+    message: string;
+  }
+
 export interface User {
     id: number;
     name: string;
