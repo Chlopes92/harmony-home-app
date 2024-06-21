@@ -13,51 +13,31 @@ import { Product } from '../../shared/models/Product'; // Assurez-vous d'importe
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
-  loginForm!: FormGroup;
+  loginForm: FormGroup;
   validationError: string[] = [];
 
-  constructor(
-    private formBuilder: FormBuilder,
-    private router: Router,
-    private userService: UserService,
-    private wishlistService: WishlistService // Injectez le service de wishlist
-  ) {}
-
-  ngOnInit() {
-    this.loginForm = this.formBuilder.group({
-      email: ['', [Validators.required]],
-      password: ['', [Validators.required]],
+  constructor(private fb: FormBuilder, private userService: UserService, private router: Router) {
+    this.loginForm = this.fb.group({
+      email: ['', [Validators.required, Validators.email]],
+      password: ['', Validators.required]
     });
   }
 
-  onLogin() {
-    if (this.loginForm.valid) {
-      const { email, password } = this.loginForm.value;
-      this.userService.login(email, password).subscribe({
-        next: ({ token, user }) => {
-          localStorage.setItem('token', token);
+  ngOnInit(): void {}
 
-          // Obtenez l'URL sauvegardée
-          const redirectUrl = localStorage.getItem('redirectUrl') || '/user-space';
-          this.router.navigate([redirectUrl]);
-          localStorage.removeItem('redirectUrl'); // Nettoyez après la redirection
+  onLogin(): void {
+    const { email, password } = this.loginForm.value;
 
-          // Vérifiez si un produit est en attente d'ajout à la liste de souhaits
-          this.checkPendingWishlistProduct();
-        },
-        error: error => {
-          alert('Email ou mot de passe incorrect');
-        }
-      });
-    }
-  }
-
-  private checkPendingWishlistProduct(): void {
-    const pendingProduct = localStorage.getItem('pendingWishlistProduct');
-    if (pendingProduct) {
-      const product: Product = JSON.parse(pendingProduct);
-      this.wishlistService.addToWishlist(product);
-      localStorage.removeItem('pendingWishlistProduct');
-    }
+    this.userService.login(email, password).subscribe(
+      response => {
+        // Rediriger l'utilisateur vers la page de profil ou une autre page appropriée
+        this.router.navigate(['/profile']);
+      },
+      error => {
+        // Gérer les erreurs, afficher un message d'erreur à l'utilisateur
+        console.error('Erreur lors de la connexion', error);
+        this.validationError.push('Connexion échouée');
+      }
+    );
   }
 }
