@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
 import { DeleteAccountResponse, LoginResponse, User } from '../../shared/models/User';
@@ -12,13 +12,16 @@ export class UserService {
   public currentUser: Observable<User | null>;
 
   constructor(private http: HttpClient) {
-    this.currentUserSubject = new BehaviorSubject<User | null>(null);
+    const savedUser = localStorage.getItem('currentUser');
+    this.currentUserSubject = new BehaviorSubject<User | null>(savedUser ? JSON.parse(savedUser) : null);
     this.currentUser = this.currentUserSubject.asObservable();
   }
 
   login(email: string, password: string): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${USER_URL}login`, { email, password }).pipe(
       tap(response => {
+        localStorage.setItem('token', response.token);
+        localStorage.setItem('currentUser', JSON.stringify(response.user));
         this.currentUserSubject.next(response.user);
       })
     );
@@ -27,21 +30,20 @@ export class UserService {
   signup(name: string, firstname: string, email: string, password: string, phone: string): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${USER_URL}signup`, { name, firstname, email, phone, password }).pipe(
       tap(response => {
+        localStorage.setItem('token', response.token);
+        localStorage.setItem('currentUser', JSON.stringify(response.user));
         this.currentUserSubject.next(response.user);
       })
     );
   }
 
-  // newPassword(email: string, newPassword: string): Observable<NewPasswordResponse> {
-  //   return this.http.patch<NewPasswordResponse>(`${USER_URL}`, { email, newPassword });
-  // }
-
-  supprimerCompte(userId: number): Observable<DeleteAccountResponse> {
-    return this.http.delete<DeleteAccountResponse>(`${USER_URL}${userId}`);
+  deleteAccount(userId: number): Observable<DeleteAccountResponse> {
+    const token = localStorage.getItem('token');
+    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
+    return this.http.delete<DeleteAccountResponse>(`${USER_URL}${userId}`, { headers });
   }
 
   getCurrentUser(): User | null {
     return this.currentUserSubject.value;
   }
-
 }

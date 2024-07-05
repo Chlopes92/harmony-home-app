@@ -11,27 +11,42 @@ import { DeleteAccountResponse, User } from '../../shared/models/User';
   styleUrl: './user-space.component.css'
 })
 export class UserSpaceComponent {
-
   currentUser: User | null = null;
 
-  constructor(private userService: UserService, private router: Router) { }
+  constructor(private userService: UserService, private router: Router) {}
 
-  ngOnInit(): void {
-    this.currentUser = this.userService.getCurrentUser();
+  ngOnInit() {
+    this.loadCurrentUser();
+  }
+
+  loadCurrentUser() {
+    this.userService.currentUser.subscribe(
+      (user: User | null) => {
+        if (user) {
+          console.log('Utilisateur actuel:', user);
+          this.currentUser = user;
+        } else {
+          console.log('Aucun utilisateur connecté');
+        }
+      },
+      (error) => {
+        console.error('Erreur lors de la récupération de l\'utilisateur', error);
+      }
+    );
   }
 
   deleteAccount(): void {
     if (this.currentUser) {
       const userId = this.currentUser.id;
-      
-      this.userService.supprimerCompte(userId).subscribe(
-        (response: DeleteAccountResponse) => {
-          console.log(response.message);
-          // Rediriger l'utilisateur vers la page de connexion ou une autre page appropriée
+
+      this.userService.deleteAccount(userId).subscribe(
+        (response) => {
+          console.log('Compte supprimé', response);
+          localStorage.removeItem('token');
+          localStorage.removeItem('currentUser');
           this.router.navigate(['/login']);
         },
         (error) => {
-          // Gérer les erreurs, afficher un message d'erreur à l'utilisateur
           console.error('Erreur lors de la suppression du compte', error);
         }
       );
