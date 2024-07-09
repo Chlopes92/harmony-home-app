@@ -49,9 +49,9 @@ signUp(name: string, firstname: string, email: string, password: string, phone: 
       this.isCreated = true;
       alert('Compte crée avec succès');
 
-      const redirectUrl = localStorage.getItem('redirectUrl') || '/user-space';
-        this.router.navigate([redirectUrl]);
-        localStorage.removeItem('redirectUrl'); // Nettoyer après la redirection
+      // const redirectUrl = localStorage.getItem('/login');
+      //   this.router.navigate([redirectUrl]);
+        // localStorage.removeItem('redirectUrl'); // Nettoyer après la redirection
     },
     error: (error) => {
       console.error("Erreur lors de la création de l'utilisateur", error);

@@ -5,7 +5,12 @@ export interface LoginResponse {
 
 export interface DeleteAccountResponse {
     message: string;
-  }
+}
+
+export interface ResetPasswordResponse {
+    status: string;
+    message: string;
+}
 
 export interface User {
     id: number;

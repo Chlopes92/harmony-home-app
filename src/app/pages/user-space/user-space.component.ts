@@ -20,14 +20,15 @@ export class UserSpaceComponent {
   }
 
   loadCurrentUser() {
+    const savedUser = this.userService.getCurrentUser();
+    if (savedUser) {
+      this.currentUser = savedUser;
+    }
+
     this.userService.currentUser.subscribe(
       (user: User | null) => {
-        if (user) {
-          console.log('Utilisateur actuel:', user);
-          this.currentUser = user;
-        } else {
-          console.log('Aucun utilisateur connecté');
-        }
+        this.currentUser = user;
+        console.log('Utilisateur actuel:', this.currentUser);
       },
       (error) => {
         console.error('Erreur lors de la récupération de l\'utilisateur', error);
@@ -36,14 +37,12 @@ export class UserSpaceComponent {
   }
 
   deleteAccount(): void {
-    if (this.currentUser) {
-      const userId = this.currentUser.id;
+    const userId = this.currentUser?.id;
 
+    if (userId) {
       this.userService.deleteAccount(userId).subscribe(
         (response) => {
           console.log('Compte supprimé', response);
-          localStorage.removeItem('token');
-          localStorage.removeItem('currentUser');
           this.router.navigate(['/login']);
         },
         (error) => {
@@ -53,5 +52,11 @@ export class UserSpaceComponent {
     } else {
       console.error('Aucun utilisateur connecté');
     }
+  }
+
+  logout(): void {
+    localStorage.removeItem('token');
+    localStorage.removeItem('currentUser');
+    this.router.navigate(['/login']);
   }
 }

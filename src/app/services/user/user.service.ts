@@ -1,7 +1,7 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject, Observable, tap } from 'rxjs';
-import { DeleteAccountResponse, LoginResponse, User } from '../../shared/models/User';
+import { DeleteAccountResponse, LoginResponse, ResetPasswordResponse, User } from '../../shared/models/User';
 import { USER_URL } from '../../shared/constants/urls';
 
 @Injectable({
@@ -38,12 +38,21 @@ export class UserService {
   }
 
   deleteAccount(userId: number): Observable<DeleteAccountResponse> {
-    const token = localStorage.getItem('token');
-    const headers = new HttpHeaders().set('Authorization', `Bearer ${token}`);
-    return this.http.delete<DeleteAccountResponse>(`${USER_URL}${userId}`, { headers });
+    return this.http.delete<DeleteAccountResponse>(`${USER_URL}${userId}`).pipe(
+      tap(() => {
+        localStorage.removeItem('token');
+        localStorage.removeItem('currentUser');
+        this.currentUserSubject.next(null);
+      })
+    );
+  }
+
+  resetPassword(email: string, newPassword: string): Observable<ResetPasswordResponse> {
+    return this.http.patch<ResetPasswordResponse>(`${USER_URL}reset-password`, { email, newPassword });
   }
 
   getCurrentUser(): User | null {
-    return this.currentUserSubject.value;
+    const savedUser = localStorage.getItem('currentUser');
+    return savedUser ? JSON.parse(savedUser) : null;
   }
 }

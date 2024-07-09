@@ -1,0 +1,18 @@
+article {
+    margin-top: 158px;
+}
+
+img{
+    width: 323.94px;
+    height: 278px;
+    border-radius: 5px;
+}
+
+li{
+    display: flex;
+}
+
+.wishlist-card{
+    border: solid var(--color-red) 2px;
+    border-radius: 12px;
+}
