@@ -17,7 +17,7 @@
             <div>
                 <input class="input-with-border" placeholder="Téléphone*" type="tel" formControlName="phone" [class.hasError]="validationError.includes('phone')">
             </div>
-            <button class="button-filled" type="submit" (click)="onSignUp()">Valider</button>
+            <button class="button-filled" type="submit" (click)="onSignUp()" routerLink="/login"> Valider</button>
         </form>
     </article>
 </section>

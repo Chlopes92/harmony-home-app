@@ -14,6 +14,8 @@ import { CommonModule } from '@angular/common';
 })
 export class ProductDetailsComponent implements OnInit{
   product!: Product;
+  showDimension = false;
+  showFeatures = false;
 
   constructor(
     public activatedRoute: ActivatedRoute, 
@@ -38,6 +40,14 @@ export class ProductDetailsComponent implements OnInit{
   addToCart(){
     this.cartService.addToCart(this.product);
     this.router.navigateByUrl('/cart');
+  }
+
+  toggleSection(section: string) {
+    if (section === 'dimension') {
+      this.showDimension = !this.showDimension;
+    } else if (section === 'features') {
+      this.showFeatures = !this.showFeatures;
+    }
   }
 
 

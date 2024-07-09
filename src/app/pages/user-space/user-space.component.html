@@ -1,4 +1,24 @@
 <section>
-    <img src="/assets/img/user-space.png" alt="">
-    <button (click)="deleteAccount()">Supprimer mon compte</button>
-</section>
+    <article class="user-space">
+    <div class="profile-container">
+      <h2>Bonjour, {{ currentUser?.firstname }}</h2>
+      <div class="profile-menu">
+        <h3>Mon Profil<span class="dropdown-icon">▼</span></h3>
+        <div class="profile-section">
+          <h4>Mon espace personnel</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+        </div>
+        <div class="profile-section">
+          <h4>Mes derniers achats</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+        </div>
+        <div class="profile-section">
+          <h4>Aide & Service</h4>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
+        </div>
+      </div>
+      <button class="button-filled" (click)="deleteAccount()">Supprimer le compte</button>
+    </div>
+</article>
+  </section>
+  
