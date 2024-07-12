@@ -1,5 +1,13 @@
 article {
-    margin-top: 158px;
+    margin: 158px 3.5% 0;
+}
+
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 2rem 3rem;
+    width: 95vw;
+    margin-top: 3%;
 }
 
 img{
@@ -15,4 +23,5 @@ li{
 .wishlist-card{
     border: solid var(--color-red) 2px;
     border-radius: 12px;
+    padding: 5%;
 }

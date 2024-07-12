@@ -24,7 +24,10 @@ export class ProductService {
   }
 
   getProductBySearchTerm(title: string): Observable<Product[]> {
-    return this.http.get<Product[]>(`${PRODUCT_BY_SEARCH_URL}${title}`)
+    console.log(`Request URL: ${PRODUCT_BY_SEARCH_URL}${title}`);
+    return this.http.get<ApiResponse>(`${PRODUCT_BY_SEARCH_URL}${title}`).pipe(
+      map(response => response.data)
+    );
   }
 
 }

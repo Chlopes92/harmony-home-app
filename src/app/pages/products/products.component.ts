@@ -26,9 +26,17 @@ export class ProductsComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(params => {
       const subCategoryId = params['subCategoryId'];
-      this.productService.getProductsBySubCatgories(subCategoryId).subscribe((data: Product[]) => {
-        this.products = data;
-      });
+      const searchTerm = params['searchTerm'];
+
+      if (subCategoryId) {
+        this.productService.getProductsBySubCatgories(subCategoryId).subscribe((data: Product[]) => {
+          this.products = data;
+        });
+      } else if (searchTerm) {
+        this.productService.getProductBySearchTerm(searchTerm).subscribe((data: Product[]) => {
+          this.products = data;
+        });
+      }
     });
 
     // Vérifiez si un produit est en attente d'ajout à la liste de souhaits

@@ -21,7 +21,7 @@
                 <p>{{product.description}}</p>
             </li>
             <li><button class="button-filled" (click)="addToCart()">Ajouter au panier</button></li>
-            <li><button class="button-empty">Ajouter au favoris</button></li>
+            <li><button class="button-empty" (click)="addToWishlist()">Ajouter au favoris</button></li>
             <li>
                 <p (click)="toggleSection('dimension')">
                     Dimension du Produit
