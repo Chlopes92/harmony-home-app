@@ -2,11 +2,12 @@ import { Component } from '@angular/core';
 import { Product } from '../../shared/models/Product';
 import { WishlistService } from '../../services/wishlist/wishlist.service';
 import { EmptyWishlistComponent } from '../../components/empty-wishlist/empty-wishlist.component';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-wishlist',
   standalone: true,
-  imports: [EmptyWishlistComponent],
+  imports: [EmptyWishlistComponent, CommonModule],
   templateUrl: './wishlist.component.html',
   styleUrl: './wishlist.component.css'
 })

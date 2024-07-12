@@ -34,7 +34,7 @@ export const routes: Routes = [
         component: SubCategoryComponent
     },
     {
-        path:'search/:searchTerm',
+        path:'category/search/:searchTerm',
         component: ProductsComponent
     },
     {

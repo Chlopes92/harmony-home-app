@@ -1,11 +1,14 @@
 import { Component, OnInit, OnDestroy } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product/product.service';
+import { FormBuilder, FormGroup, FormsModule, Validators } from '@angular/forms';
+import { Product } from '../../shared/models/Product';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-search-bar',
   standalone: true,
-  imports: [],
+  imports: [CommonModule, FormsModule],
   templateUrl: './search-bar.component.html',
   styleUrls: ['./search-bar.component.css']
 })
@@ -45,7 +48,7 @@ export class SearchBarComponent implements OnInit, OnDestroy {
 
   search(term: string): void {
     if (term) {
-      this.router.navigateByUrl('/search/' + term);
+      this.router.navigateByUrl('/category/search/' + term);
     }
   }
 
