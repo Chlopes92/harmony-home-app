@@ -19,6 +19,7 @@ export class HeaderComponent implements OnInit{
   products: Product[] = [];
   cart!: Cart;
   displayElement: boolean = false;
+  isMenuOpen = false;
 
   constructor(private productService:ProductService, activatedRoute:ActivatedRoute, private cartService:CartService, private router: Router) {
     // activatedRoute.params.subscribe((params) => {
@@ -45,4 +46,8 @@ export class HeaderComponent implements OnInit{
     });
   }
 
+  toggleMenu() {
+    this.isMenuOpen = !this.isMenuOpen;
+  }
 }
+

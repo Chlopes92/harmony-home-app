@@ -1,5 +1,5 @@
 <header>
-    <nav>
+    <nav class="desktop-nav">
         <ul class="menu">
             @if(!displayElement){
             <li>
@@ -42,4 +42,25 @@
             }
         </ul>
     </nav>
+    
+
+    <nav class="mobile-nav">
+        <div class="mobile-header">
+            <a routerLink="/">
+                <img class="logo" src="/assets/icons/logo.png" alt="retour à l'accueil">
+            </a>
+            <div id="toggle" (click)="toggleMenu()">
+                <span></span>
+            </div>
+        </div>
+        <div id="menu" [class.show]="isMenuOpen">
+            <ul>
+                <li><a routerLink="/contact">Contact</a></li>
+                <li><a routerLink="/wishlist">Wishlist</a></li>
+                <li><a routerLink="/user-space">Espace utilisateur</a></li>
+                <li><a routerLink="/cart">Panier</a></li>
+            </ul>
+        </div>
+    </nav>
 </header>
+
