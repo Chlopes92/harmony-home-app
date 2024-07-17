@@ -20,15 +20,26 @@ article h2 {
     max-width: 65rem; /* Largeur maximale pour limiter l'expansion */
     border: var(--color-red) solid 2px;
     padding: 1rem;
-    margin-bottom: 15px;
+    margin-bottom: 1%;
 }
 
-.password-toggle {
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    cursor: pointer;
+.togglePassword {
+    cursor: pointer; 
+    position: absolute; 
+    right: 8%; 
+    top: 37%; 
+    transform: translateY(-50%); 
+    width: 24px; 
+    height: 24px;
+}
+
+.is-invalid {
+    border-color: #e3342f;
+}
+
+.invalid-feedback {
+    color: #e3342f;
+    font-size: 0.875rem;
 }
 
 input:focus {
@@ -46,5 +57,4 @@ form {
 form div {
     position: relative;
     width: 100%;
-    max-width: 65rem;
 }

@@ -36,3 +36,8 @@ article {
     padding: 0 !important;
     height: 0 !important;
 }
+
+.loginForm {
+    display: grid;
+    gap: 1em;
+}

@@ -23,7 +23,7 @@
             <li><button class="button-filled" (click)="addToCart()">Ajouter au panier</button></li>
             <li><button class="button-empty" (click)="addToWishlist()">Ajouter au favoris</button></li>
             <li>
-                <p (click)="toggleSection('dimension')">
+                <p (click)="toggleSection('dimension')" class="gap">
                     Dimension du Produit
                     <span>{{showDimension ? '-' : '+'}}</span>
                 </p>
@@ -32,7 +32,7 @@
                 }
             </li>
             <li>
-                <p (click)="toggleSection('features')">
+                <p (click)="toggleSection('features')" class="gap">
                     Caractéristiques du Produit
                     <span>{{showFeatures ? '-' : '+'}}</span>
                 </p>

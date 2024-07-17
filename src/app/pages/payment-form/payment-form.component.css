@@ -101,3 +101,14 @@ label {
     width: 55%; /* Ajusté pour éviter le chevauchement */
     border-radius: 37px;
 }
+
+form {
+    padding: 3em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1em;
+}
+
+
+
