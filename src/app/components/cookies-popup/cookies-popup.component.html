@@ -1,4 +1,5 @@
-<div class="popup-overlay" *ngIf="showPopup">
+@if(showPopup){
+<article class="popup-overlay">
   <div class="cookie-popup">
     <img src="assets/img/cookies.png" alt="Cookie Image">
     <h2>Acceptez-vous nos délicieux cookies ?</h2>
@@ -14,4 +15,5 @@
       </button>
     </div>
   </div>
-</div>
+</article>
+}

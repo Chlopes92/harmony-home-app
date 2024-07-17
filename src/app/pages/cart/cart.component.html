@@ -1,10 +1,11 @@
 @if(cart && cart.items.length){
-    <section>
-        <h2>Mon Panier</h2>
-        <ul class="container">
-            <p>
-                <a (click)="clearCart()">Vider le panier</a>
-            </p>
+<section>
+    <h2>Mon Panier</h2>
+    <p>
+        <a (click)="clearCart()" class="link position">Vider le panier</a>
+    </p>
+    <div class="container">
+        <ul>
             @for(cartItem of cart.items; track cart.items){
             <li>
                 <div>
@@ -29,18 +30,31 @@
             </li>
             }
         </ul>
-        <div>
-            <p class="total-price">{{cart.totalPrice | currency: 'EUR'}}</p>
+        <div class="cart-summary">
+            <div class="inline">
+                <p class="font-style">Total</p>
+                <p class="total-price">{{cart.totalPrice | currency: 'EUR'}}</p>
+            </div>
+            <hr>
+            <div class="inline">
+                <p class="font-style">Livraison</p>
+                <p class="total-price">Gratuit</p>
+            </div>
+            <hr>
+            <div class="inline">
+                <p class="font-style">Taxes incluses</p>
+                <p class="total-price">€0.00</p>
+            </div>
             <button class="button-filled" routerLink="/delivery-form">Passer commande</button>
             <p>
-                <a routerLink="/category">Continuer mes achats</a>
+                <a routerLink="/category" class="link center">Continuer mes achats</a>
             </p>
-    
         </div>
-        <p class="product-count">Total d’article : {{cart.totalCount}}</p>
-    </section>
-    }
-    
-    @else {
-    <app-empty-cart></app-empty-cart>
-    }
+    </div>
+    <p class="product-count">Total d’article : {{cart.totalCount}}</p>
+</section>
+}
+
+@else {
+<app-empty-cart></app-empty-cart>
+}

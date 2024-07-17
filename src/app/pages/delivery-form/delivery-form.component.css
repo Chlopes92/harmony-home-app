@@ -115,3 +115,16 @@ label {
     border-color: red;
 }
 
+form {
+    padding: 1em;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 0.5em;
+}
+
+.form-group {
+    width: 100%; 
+}
+
+
