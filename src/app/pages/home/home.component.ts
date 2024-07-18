@@ -1,10 +1,11 @@
 import { Component, HostListener } from '@angular/core';
 import { RouterModule } from '@angular/router';
+import { SliderComponent } from '../../components/slider/slider.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [RouterModule],
+  imports: [RouterModule, SliderComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
