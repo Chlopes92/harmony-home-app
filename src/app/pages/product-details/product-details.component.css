@@ -2,6 +2,7 @@
     height: 20em;
     width: 100%;
     border-radius: 12px;
+    object-position: bottom;
 }
 
 .img-detail {
