@@ -46,6 +46,7 @@ export class ProductsComponent implements OnInit {
   addToWishlist(product: Product) {
     if (this.isUserLoggedIn()) {
       this.wishlistService.addToWishlist(product);
+      alert(`${product.title} a été ajouté à votre liste de souhaits.`);
     } else {
       // Stockez le produit dans localStorage 
       localStorage.setItem('pendingWishlistProduct', JSON.stringify(product));

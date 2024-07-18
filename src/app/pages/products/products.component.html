@@ -4,7 +4,7 @@
         @for (product of products; track products){
         <li>
             <a routerLink="/wishlist"  (click)="addToWishlist(product)">
-                <img class="favoris-img" [src]="productInWishlist(product.id) ? 'assets/icons/favorite-filled.png' : 'assets/icons/favoris.png'" alt="">
+                <img class="favoris-img" src="assets/icons/favoris.png" alt="ajouter au favoris">
             </a>
             <a routerLink="/product-details/{{product.id}}">
                 <img class="product-img" [src]="product.img_url" [alt]="product.title">

@@ -2,19 +2,23 @@
 <section>
   <article>
     <h2>Ma Liste de Souhaits</h2>
+    <a (click)="clearWishlist()" class="link position">Vider la liste de souhaits</a>
     <ul>
       @for(product of wishlist; track product){
       <li>
         <div class="wishlist-card">
-          <img [src]="product.img_url" [alt]="product.title">
-          <p>{{ product.title }}</p>
-          <p>{{ product.price | currency: 'EUR'}}</p>
-          <button (click)="removeFromWishlist(product)">Retirer</button>
+          <img class="product-img" [src]="product.img_url" [alt]="product.title">
+          <div class="padding-top">
+            <p>{{ product.title }}</p>
+            <p>{{ product.price | currency: 'EUR'}}</p>
+          </div>
+          <a (click)="removeFromWishlist(product)" class="remove-button">
+            <img class="favoris-img" src="assets/icons/favoris-filled.png" alt="retirer de favoris">
+          </a>
         </div>
       </li>
       }
     </ul>
-    <button (click)="clearWishlist()">Vider la liste de souhaits</button>
   </article>
 </section>
 }
