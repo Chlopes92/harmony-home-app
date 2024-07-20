@@ -3,7 +3,7 @@
     <ul>
         @for (product of products; track products){
         <li>
-            <a routerLink="/wishlist"  (click)="addToWishlist(product)">
+            <a href="#" (click)="onWishlistClick($event, product)">
                 <img class="favoris-img" src="assets/icons/favoris.png" alt="ajouter au favoris">
             </a>
             <a routerLink="/product-details/{{product.id}}">
@@ -15,3 +15,6 @@
         }
     </ul>
 </section>
+<app-toast></app-toast>
+
+

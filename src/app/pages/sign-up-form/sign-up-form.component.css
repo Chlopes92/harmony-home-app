@@ -1,4 +1,3 @@
-/* Styles pour le composant d'inscription */
 article {
     border-radius: 37px;
     padding: 2rem; /* Ajout de padding pour l'espacement interne */
@@ -53,7 +52,6 @@ form {
     align-items: center;
 }
 
-/* Correction du positionnement du toggle password */
 form div {
     position: relative;
     width: 100%;

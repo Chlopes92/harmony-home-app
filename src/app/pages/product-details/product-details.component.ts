@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { Product } from '../../shared/models/Product';
 import { ActivatedRoute, Router } from '@angular/router';
 import { ProductService } from '../../services/product/product.service';
 import { CartService } from '../../services/cart/cart.service';
 import { CommonModule } from '@angular/common';
 import { WishlistService } from '../../services/wishlist/wishlist.service';
+import { ToastComponent } from '../../components/toast/toast.component';
 
 @Component({
   selector: 'app-product-details',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, ToastComponent],
   templateUrl: './product-details.component.html',
   styleUrl: './product-details.component.css'
 })
@@ -17,6 +18,8 @@ export class ProductDetailsComponent implements OnInit{
   product!: Product;
   showDimension = false;
   showFeatures = false;
+  @ViewChild(ToastComponent) 
+  toast!: ToastComponent
 
   constructor(
     public activatedRoute: ActivatedRoute, 
@@ -42,17 +45,33 @@ export class ProductDetailsComponent implements OnInit{
     this.checkPendingWishlistProduct();
   }
 
-  addToWishlist() {
+  addToWishlist(): void {
     if (this.product) {
       if (this.isUserLoggedIn()) {
         this.wishlistService.addToWishlist(this.product);
-        this.router.navigate(['/wishlist']); // Rediriger vers la page de la liste de souhaits
+        this.showToast('Le produit a été ajouté à vos favoris !', 'success');
+        this.router.navigate(['/wishlist']);
       } else {
-        // Stockez le produit dans localStorage 
-        localStorage.setItem('pendingWishlistProduct', JSON.stringify(this.product));
-        alert('Vous devez être connecté pour ajouter un produit à la liste de souhaits.');
-        this.router.navigate(['/login']); // Rediriger vers la page de connexion
+        this.showToast('Veuillez vous connecter pour ajouter aux favoris !', 'info');
       }
+      setTimeout(() => {
+        this.router.navigate(['/wishlist']);
+      }, 1000); 
+    }
+  }
+
+  showToast(message: string, type: 'success' | 'info' | 'warning' | 'error'): void {
+    if (this.toast) {
+      this.toast.message = message;
+      this.toast.type = type;
+      this.toast.show = true;
+      setTimeout(() => {
+        if (this.toast) {
+          this.toast.show = false;
+        }
+      }, 3000); // Le toast disparaît après 3 secondes
+    } else {
+      console.error('Toast component not initialized');
     }
   }
 
@@ -70,9 +89,14 @@ export class ProductDetailsComponent implements OnInit{
     }
   }
   
-  addToCart(){
-    this.cartService.addToCart(this.product);
-    this.router.navigateByUrl('/cart');
+  addToCart(): void {
+    if (this.product) {
+      this.cartService.addToCart(this.product);
+      this.showToast('Le produit a été ajouté à votre panier !', 'success');
+    }
+    setTimeout(() => {
+      this.router.navigate(['/cart']);
+    }, 1000); 
   }
 
   toggleSection(section: string) {

@@ -15,7 +15,7 @@ article {
 }
 
 .notification-box {
-    top: 20px; /* Adjust as needed */
+    top: 20px; 
     left: 50%;
     transform: translateX(-50%);
     pointer-events: none;

@@ -50,7 +50,7 @@ export class PaymentFormComponent {
       });
       console.log(this.validationError);
     } else {
-      // Process payment
+     
       this.router.navigate(['/summary']);
     }
   }

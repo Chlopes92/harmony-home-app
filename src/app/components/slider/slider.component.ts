@@ -33,7 +33,7 @@ export class SliderComponent {
 
   ngAfterViewInit() {
     this.updateClasses();
-    setInterval(() => this.nextSlide(), 3000); // Change slide every 3 seconds
+    setInterval(() => this.nextSlide(), 3000); // Change la slide toute les 3 seconds
   }
 
   prevSlide() {

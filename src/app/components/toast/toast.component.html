@@ -1,0 +1,9 @@
+@if(show){
+    <div class="toast-container">
+        <div class="toast" [ngClass]="backgroundColorClass">
+            <span class="icon">{{ icon }}</span>
+            <p>{{ message }}</p>
+            <button class="close-btn" (click)="hideToast()"></button>
+        </div>
+    </div>      
+}

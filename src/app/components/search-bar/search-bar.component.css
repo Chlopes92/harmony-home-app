@@ -11,7 +11,7 @@
     width: 23rem;
     border: none;
     padding: 0 15px;
-    padding-right: 50px; /* Pour s'assurer qu'il y a de la place pour le bouton */
+    padding-right: 50px; 
 }
 
 .search-button {
