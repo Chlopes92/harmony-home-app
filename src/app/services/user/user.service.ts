@@ -30,8 +30,6 @@ export class UserService {
   signup(name: string, firstname: string, email: string, password: string, phone: string): Observable<LoginResponse> {
     return this.http.post<LoginResponse>(`${USER_URL}signup`, { name, firstname, email, phone, password }).pipe(
       tap(response => {
-        localStorage.setItem('token', response.token);
-        localStorage.setItem('currentUser', JSON.stringify(response.user));
         this.currentUserSubject.next(response.user);
       })
     );

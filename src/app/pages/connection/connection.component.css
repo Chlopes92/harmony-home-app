@@ -4,3 +4,9 @@
     flex-wrap: wrap;
     grid-gap: 7rem
 }
+
+@media (max-width: 1148px) {
+    .container {
+        grid-gap: 1rem
+    }
+}

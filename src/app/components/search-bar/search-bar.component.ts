@@ -25,7 +25,7 @@ export class SearchBarComponent implements OnInit, OnDestroy {
   ];
   currentPhraseIndex: number = 0; // Index pour suivre la progression de l'animation de texte (phrases).
   typingIndex: number = 0; // Index pour suivre la progression de l'animation de texte (caractères).
-  intervalId: number | undefined; // Identifiant de l'intervalle de temps pour l'animation.
+  intervalId!: number; // Identifiant de l'intervalle de temps pour l'animation.
 
   constructor(private activatedRoute: ActivatedRoute, private router: Router, private productService: ProductService) {
     activatedRoute.params.subscribe((params) => {
@@ -40,7 +40,7 @@ export class SearchBarComponent implements OnInit, OnDestroy {
 
   // Méthode appelée lors de la destruction du composant.
   ngOnDestroy(): void {
-    if (this.intervalId !== undefined) {
+    if (this.intervalId) {
       clearInterval(this.intervalId); // Arrêter l'intervalle pour éviter les problèmes de performance.
     }
   }

@@ -54,9 +54,9 @@ export class ProductDetailsComponent implements OnInit{
       } else {
         this.showToast('Veuillez vous connecter pour ajouter aux favoris !', 'info');
       }
-      setTimeout(() => {
-        this.router.navigate(['/wishlist']);
-      }, 1000); 
+      // setTimeout(() => {
+      //   this.router.navigate(['/wishlist']);
+      // }, 1000); 
     }
   }
 
@@ -94,9 +94,9 @@ export class ProductDetailsComponent implements OnInit{
       this.cartService.addToCart(this.product);
       this.showToast('Le produit a été ajouté à votre panier !', 'success');
     }
-    setTimeout(() => {
-      this.router.navigate(['/cart']);
-    }, 1000); 
+    // setTimeout(() => {
+    //   this.router.navigate(['/cart']);
+    // }, 1000); 
   }
 
   toggleSection(section: string) {

@@ -14,7 +14,7 @@ import { CommonModule } from '@angular/common';
 export class NewPasswordComponent {
   resetPasswordForm: FormGroup;
   submitted = false;
-  errorMessage: string | null = null;
+  errorMessage!: string;
 
   constructor(
     private formBuilder: FormBuilder,
