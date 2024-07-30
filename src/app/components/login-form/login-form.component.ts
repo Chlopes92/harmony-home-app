@@ -1,20 +1,23 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Router, RouterLink } from '@angular/router';
 import { UserService } from '../../services/user/user.service';
 import { WishlistService } from '../../services/wishlist/wishlist.service'; // Importez le service de wishlist
 import { Product } from '../../shared/models/Product'; // Assurez-vous d'importer le modèle Product
+import { ToastComponent } from '../toast/toast.component';
 
 @Component({
   selector: 'app-login-form',
   standalone: true,
-  imports: [ReactiveFormsModule, RouterLink],
+  imports: [ReactiveFormsModule, RouterLink, ToastComponent],
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css']
 })
 export class LoginFormComponent implements OnInit {
   loginForm!: FormGroup;
   validationError: string[] = [];
+  @ViewChild(ToastComponent) 
+  toast!: ToastComponent
 
   constructor(
     private formBuilder: FormBuilder,
@@ -46,9 +49,24 @@ export class LoginFormComponent implements OnInit {
           this.checkPendingWishlistProduct();
         },
         error: error => {
-          alert('Erreur lors de la connexion');
+          this.showToast('Erreur lors de la connexion', 'error');
         }
       });
+    }
+  }
+
+  showToast(message: string, type: 'success' | 'info' | 'warning' | 'error'): void {
+    if (this.toast) {
+      this.toast.message = message;
+      this.toast.type = type;
+      this.toast.show = true;
+      setTimeout(() => {
+        if (this.toast) {
+          this.toast.show = false;
+        }
+      }, 3000); // Le toast disparaît après 3 secondes
+    } else {
+      console.error('Toast component not initialized');
     }
   }
 

@@ -1,4 +1,3 @@
-/* payment-form.component.css */
 .form-container {
     margin-top: 158px;
     display: flex;
@@ -77,8 +76,8 @@ label {
 
 .step p {
     margin: 0;
-    margin-left: 70px; /* Align the text with the step content */
-    padding-top: 30px; /* Ajouter un espace entre l'icône et le texte */
+    margin-left: 70px; 
+    padding-top: 30px; 
 }
 
 .cart-items {

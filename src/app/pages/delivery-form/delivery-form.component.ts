@@ -17,7 +17,7 @@ export class DeliveryFormComponent implements OnInit {
   cart!: Cart;
   deliveryForm!: FormGroup;
   validationError: string[] = [];
-  submitted = false; // Variable to track form submission
+  submitted = false; 
   countries: string[] = ["France", "Belgique", "Suisse", "Canada", "États-Unis", "Allemagne", "Royaume-Uni"];
   filteredCountries!: Observable<string[]>;
 
@@ -55,7 +55,7 @@ export class DeliveryFormComponent implements OnInit {
   }
 
   onDelivery() {
-    this.submitted = true; // Mark form as submitted
+    this.submitted = true; 
     this.validationError = [];
     if (this.deliveryForm.invalid) {
       Object.keys(this.deliveryForm.controls).forEach((input) => {

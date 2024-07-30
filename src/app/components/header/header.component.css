@@ -1,4 +1,3 @@
-/* Common Styles */
 a {
     text-decoration: none;
 }
@@ -42,7 +41,6 @@ span {
     width: 10rem;
 }
 
-/* Mobile Navigation */
 .mobile-nav {
     display: none;
     flex-direction: column;

@@ -1,20 +1,24 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { ProductService } from '../../services/product/product.service';
 import { ActivatedRoute, Router, RouterLink } from '@angular/router';
 import { Product } from '../../shared/models/Product';
 import { CommonModule } from '@angular/common';
 import { NavCategoryComponent } from '../../components/nav-category/nav-category.component';
 import { WishlistService } from '../../services/wishlist/wishlist.service';
+import { BrowserModule } from '@angular/platform-browser';
+import { ToastComponent } from '../../components/toast/toast.component';
 
 @Component({
   selector: 'app-products',
   standalone: true,
-  imports: [RouterLink, CommonModule, NavCategoryComponent],
+  imports: [RouterLink, CommonModule, NavCategoryComponent, ToastComponent],
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
 export class ProductsComponent implements OnInit {
   products: Product[] = [];
+  @ViewChild(ToastComponent) 
+  toast!: ToastComponent;
 
   constructor(
     private productService: ProductService,
@@ -43,13 +47,36 @@ export class ProductsComponent implements OnInit {
     this.checkPendingWishlistProduct();
   }
 
+  onWishlistClick(event: Event, product: Product) {
+    event.preventDefault();
+    this.addToWishlist(product);
+  }
+
   addToWishlist(product: Product) {
     if (this.isUserLoggedIn()) {
       this.wishlistService.addToWishlist(product);
-      alert(`${product.title} a été ajouté à votre liste de souhaits.`);
+      this.showToast('Le produit a été ajouté à vos favoris !', 'success');
     } else {
-      // Stockez le produit dans localStorage 
       localStorage.setItem('pendingWishlistProduct', JSON.stringify(product));
+      this.showToast('Veuillez vous connecter pour ajouter à la wishlist !', 'info');
+    }
+    setTimeout(() => {
+      this.router.navigate(['/wishlist']);
+    }, 1000); 
+  }
+
+  showToast(message: string, type: 'success' | 'info' | 'warning' | 'error'): void {
+    if (this.toast) {
+      this.toast.message = message;
+      this.toast.type = type;
+      this.toast.show = true;
+      setTimeout(() => {
+        if (this.toast) {
+          this.toast.show = false;
+        }
+      }, 3000); 
+    } else {
+      console.error('Toast component not initialized');
     }
   }
 
@@ -70,4 +97,6 @@ export class ProductsComponent implements OnInit {
       localStorage.removeItem('pendingWishlistProduct');
     }
   }
+
+  
 }

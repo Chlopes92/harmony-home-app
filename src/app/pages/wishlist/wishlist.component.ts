@@ -7,7 +7,10 @@ import { CommonModule } from '@angular/common';
 @Component({
   selector: 'app-wishlist',
   standalone: true,
-  imports: [EmptyWishlistComponent, CommonModule],
+  imports: [
+    EmptyWishlistComponent, 
+    CommonModule, 
+  ],
   templateUrl: './wishlist.component.html',
   styleUrl: './wishlist.component.css'
 })

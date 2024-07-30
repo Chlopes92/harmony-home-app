@@ -3,7 +3,7 @@ article {
     background-color: var(--color-dew);
     border-radius: 37px;
     height: 28rem;
-    width: 32rem;
+    max-width: 32rem;
     display: flex;
     flex-direction: column;
     padding: 4rem 2rem;
@@ -15,7 +15,7 @@ article {
 }
 
 .notification-box {
-    top: 20px; /* Adjust as needed */
+    top: 20px; 
     left: 50%;
     transform: translateX(-50%);
     pointer-events: none;

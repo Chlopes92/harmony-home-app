@@ -46,15 +46,16 @@
                 <p class="total-price">€0.00</p>
             </div>
             <button class="button-filled" routerLink="/delivery-form">Passer commande</button>
-            <p>
-                <a routerLink="/category" class="link center">Continuer mes achats</a>
+            <p class="center">
+                <a routerLink="/category" class="link">Continuer mes achats</a>
             </p>
         </div>
     </div>
     <p class="product-count">Total d’article : {{cart.totalCount}}</p>
 </section>
-}
 
-@else {
+
+
+}@else {
 <app-empty-cart></app-empty-cart>
 }
