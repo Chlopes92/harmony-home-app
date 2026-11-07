@@ -1,0 +1,15 @@
+<app-nav-category></app-nav-category>
+<div>
+    <ul>
+        @for (subCategory of subCategories; track subCategories){
+        <li class="style-item">
+            <div class="style-image">
+                <a [routerLink]="['/category', subCategory.id, 'products']">
+                    <img [src]="subCategory.img_url" [alt]="subCategory.name">
+                </a>
+            <p>{{ subCategory.name }}</p>
+            </div>
+        </li>
+        }
+    </ul>
+</div>

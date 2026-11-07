@@ -1,0 +1,27 @@
+ul{
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 3rem 2rem;
+    width: 90vw;
+    margin: auto;
+    justify-content: center;
+}
+
+img{
+    box-shadow: 4px 2px 6px #ababab;
+}
+
+p{
+    padding-top: 10px;
+}
+
+.style-image {
+    transition: transform 0.5s ease; /* Transition douce pour l'effet de zoom */
+    display: block; /* Pour éviter des problèmes d'espacement sous l'image */
+    width: 100%; /* Assure que l'image s'adapte à la largeur de son conteneur */
+    
+}
+
+.style-item:hover .style-image{
+    transform: scale(1.05); /* Zoom légèrement sur l'image au survol */
+}

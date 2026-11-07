@@ -1,0 +1,43 @@
+article {
+    margin-top: 158px;
+    background-color: var(--color-dew);
+    border-radius: 37px;
+    height: 28rem;
+    max-width: 32rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    justify-content: space-around;
+}
+
+.button-filled {
+    width: 25rem;
+}
+
+.notification-box {
+    top: 20px; 
+    left: 50%;
+    transform: translateX(-50%);
+    pointer-events: none;
+}
+
+.notification-box .relative {
+    pointer-events: auto;
+}
+
+.relative.flex.items-center {
+    opacity: 1;
+    transition: opacity 0.5s ease, margin 0.5s ease, padding 0.5s ease;
+}
+
+.opacity-0 {
+    opacity: 0 !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    height: 0 !important;
+}
+
+.loginForm {
+    display: grid;
+    gap: 1em;
+}

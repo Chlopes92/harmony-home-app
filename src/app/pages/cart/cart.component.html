@@ -1,1 +1,61 @@
-<p>cart works!</p>
+@if(cart && cart.items.length){
+<section>
+    <h2>Mon Panier</h2>
+    <p>
+        <a (click)="clearCart()" class="link position">Vider le panier</a>
+    </p>
+    <div class="container">
+        <ul>
+            @for(cartItem of cart.items; track cart.items){
+            <li>
+                <div>
+                    <img class="product-img" [src]="cartItem.product.img_url" [alt]="cartItem.product.title">
+                </div>
+                <div>
+                    <p>{{cartItem.product.title}}</p>
+                    <p>{{cartItem.product.dimension}}</p>
+                </div>
+                <div class="flex-direction">
+                    <p>{{cartItem.price | currency: 'EUR'}}</p>
+                    <select #quantitySelect [value]="cartItem.quantity"
+                        (change)="changeQuantity(cartItem, quantitySelect.value)">
+                        <option>1</option>
+                        <option>2</option>
+                        <option>3</option>
+                    </select>
+                    <button class="remove-button" (click)="removeFromCart(cartItem)">
+                        <img src="assets/icons/delete.png" alt="Supprimer">
+                    </button>
+                </div>
+            </li>
+            }
+        </ul>
+        <div class="cart-summary">
+            <div class="inline">
+                <p class="font-style">Total</p>
+                <p class="total-price">{{cart.totalPrice | currency: 'EUR'}}</p>
+            </div>
+            <hr>
+            <div class="inline">
+                <p class="font-style">Livraison</p>
+                <p class="total-price">Gratuit</p>
+            </div>
+            <hr>
+            <div class="inline">
+                <p class="font-style">Taxes incluses</p>
+                <p class="total-price">€0.00</p>
+            </div>
+            <button class="button-filled" routerLink="/delivery-form">Passer commande</button>
+            <p class="center">
+                <a routerLink="/category" class="link">Continuer mes achats</a>
+            </p>
+        </div>
+    </div>
+    <p class="product-count">Total d’article : {{cart.totalCount}}</p>
+</section>
+
+
+
+}@else {
+<app-empty-cart></app-empty-cart>
+}

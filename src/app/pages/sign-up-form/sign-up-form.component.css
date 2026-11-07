@@ -1,0 +1,58 @@
+article {
+    border-radius: 37px;
+    padding: 2rem; /* Ajout de padding pour l'espacement interne */
+    border: 2px solid var(--color-red); /* Ajouter une bordure */
+    background-color: white; /* Assurer le fond blanc */
+    max-width: 78%; /* Largeur maximale pour limiter l'expansion */
+    margin: 158px auto; /* Centrer l'article */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ajouter une ombre pour un effet d'élévation */
+}
+
+article h2 {
+    margin-bottom: 20px; /* Espace sous le titre */
+    font-size: 24px; /* Ajuster la taille du titre */
+}
+
+.input-with-border {
+    border-radius: 12px;
+    width: 100%;
+    max-width: 65rem; /* Largeur maximale pour limiter l'expansion */
+    border: var(--color-red) solid 2px;
+    padding: 1rem;
+    margin-bottom: 1%;
+}
+
+.togglePassword {
+    cursor: pointer; 
+    position: absolute; 
+    right: 8%; 
+    top: 37%; 
+    transform: translateY(-50%); 
+    width: 24px; 
+    height: 24px;
+}
+
+.is-invalid {
+    border-color: #e3342f;
+}
+
+.invalid-feedback {
+    color: #e3342f;
+    font-size: 0.875rem;
+}
+
+input:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form div {
+    position: relative;
+    width: 100%;
+}

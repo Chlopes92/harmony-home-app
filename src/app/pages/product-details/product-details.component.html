@@ -1,1 +1,47 @@
-<p>product-details works!</p>
+<section class="container">
+    @if(product.id){
+    <ul>
+        <article>
+            <li><img class="img-product1" [src]="product.img_url" [alt]="product.title"></li>
+            <div class="img-detail">
+                <li><img class="img-product2" [src]="product.img_url" [alt]="product.title"></li>
+                <li><img class="img-product3" [src]="product.img_url" [alt]="product.title"></li>
+            </div>
+        </article>
+        <div class="container-text">
+            <li>
+                <h2>{{ product.title }}</h2>
+            </li>
+            <li>
+                <h3>{{product.price | currency: 'EUR'}}</h3>
+            </li>
+            <hr>
+            <li>
+                <p>Description du Produit</p>
+                <p>{{product.description}}</p>
+            </li>
+            <li><button class="button-filled" (click)="addToCart()">Ajouter au panier</button></li>
+            <li><button class="button-empty" (click)="addToWishlist()">Ajouter au favoris</button></li>
+            <li>
+                <p (click)="toggleSection('dimension')" class="gap">
+                    Dimension du Produit
+                    <span>{{showDimension ? '-' : '+'}}</span>
+                </p>
+                @if(showDimension){
+                <p>{{product.dimension}}</p>
+                }
+            </li>
+            <li>
+                <p (click)="toggleSection('features')" class="gap">
+                    Caractéristiques du Produit
+                    <span>{{showFeatures ? '-' : '+'}}</span>
+                </p>
+                @if(showFeatures){
+                <p>{{product.features}}</p>
+                }
+            </li>
+        </div>
+    </ul>
+    }
+    <app-toast></app-toast>
+</section>

@@ -1,16 +1,24 @@
 import { Routes } from '@angular/router';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
 import { HomeComponent } from './pages/home/home.component';
-import { CategoryComponent } from './pages/category/category.component';
 import { ProductsComponent } from './pages/products/products.component';
 import { ProductDetailsComponent } from './pages/product-details/product-details.component';
 import { CartComponent } from './pages/cart/cart.component';
 import { ContactComponent } from './pages/contact/contact.component';
 import { WishlistComponent } from './pages/wishlist/wishlist.component';
-import { SummeryComponent } from './pages/summery/summery.component';
 import { LegalInformationComponent } from './pages/legal-information/legal-information.component';
 import { PrivacyPolicyComponent } from './pages/privacy-policy/privacy-policy.component';
 import { GeneralConditionsComponent } from './pages/general-conditions/general-conditions.component';
+import { SubCategoryComponent } from './pages/sub-category/sub-category.component';
+import { DeliveryFormComponent } from './pages/delivery-form/delivery-form.component';
+import { PaymentFormComponent } from './pages/payment-form/payment-form.component';
+import { UserSpaceComponent } from './pages/user-space/user-space.component';
+import { LoginFormComponent } from './components/login-form/login-form.component';
+import { NewPasswordComponent } from './pages/new-password/new-password.component';
+import { authGuard } from './guard/auth.guard';
+import { ConnectionComponent } from './pages/connection/connection.component';
+import { SignUpFormComponent } from './pages/sign-up-form/sign-up-form.component';
+import { SummaryComponent } from './pages/summary/summary.component';
 
 export const routes: Routes = [
     {
@@ -19,10 +27,18 @@ export const routes: Routes = [
     },
     {
         path:"category",
-        component: CategoryComponent
+        component: SubCategoryComponent
     },
     {
-        path:"products",
+        path:"category/:slug",
+        component: SubCategoryComponent
+    },
+    {
+        path:'category/search/:searchTerm',
+        component: ProductsComponent
+    },
+    {
+        path:"category/:subCategoryId/products",
         component: ProductsComponent
     },
     {
@@ -31,7 +47,8 @@ export const routes: Routes = [
     },
     {
         path:"wishlist",
-        component: WishlistComponent
+        component: WishlistComponent,
+        canActivate: [authGuard]
     },
     {
         path:"cart",
@@ -42,8 +59,36 @@ export const routes: Routes = [
         component: ContactComponent
     },
     {
-        path:"summery",
-        component: SummeryComponent
+        path:"delivery-form",
+        component: DeliveryFormComponent,
+        canActivate: [authGuard]
+    },
+    {
+        path:"payment-form",
+        component: PaymentFormComponent,
+        canActivate: [authGuard]
+    },
+    {
+        path:"summary",
+        component: SummaryComponent,
+        canActivate: [authGuard]
+    },
+    {
+        path:"user-space",
+        component: UserSpaceComponent,
+        canActivate: [authGuard]
+    },
+    {
+        path:"login",
+        component: ConnectionComponent
+    },
+    {
+        path:"sign-up",
+        component: SignUpFormComponent
+    },
+    {
+        path:"new-password",
+        component: NewPasswordComponent
     },
     {
         path:"legal-information",

@@ -1,0 +1,19 @@
+.container{
+    text-align: center;
+    margin-top: 10%;
+    border: solid 4px var(--color-red);
+    border-radius: 37px;
+    width: 65rem;
+    padding: 5%;
+}
+
+section {
+    display: flex;
+    justify-content: center;
+    color: var(--color-red);
+}
+
+.space-button {
+    margin: 0.5em;
+}
+

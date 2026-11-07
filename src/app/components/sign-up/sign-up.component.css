@@ -1,0 +1,24 @@
+article{
+    margin-top: 158px;
+    background-color: var(--color-mole);
+    border-radius: 37px;
+    height: 28rem;
+    max-width: 32rem;
+    display: flex;
+    flex-direction: column;
+    padding: 4rem 2rem;
+    justify-content: space-around;
+}
+
+li {
+    display: flex;
+    align-items: center;
+    grid-gap: 1rem;
+    padding-top: 0.5rem;
+}
+
+@media (max-width: 1052px) {
+    article {
+        margin-top: 1em;
+    }
+}

@@ -1,1 +1,20 @@
-<p>products works!</p>
+<app-nav-category></app-nav-category>
+<section>
+    <ul>
+        @for (product of products; track products){
+        <li>
+            <a href="#" (click)="onWishlistClick($event, product)">
+                <img class="favoris-img" src="assets/icons/favoris.png" alt="ajouter au favoris">
+            </a>
+            <a routerLink="/product-details/{{product.id}}">
+                <img class="product-img" [src]="product.img_url" [alt]="product.title">
+            </a>
+            <p>{{product.title}}</p>
+            <p>{{product.price | currency: 'EUR'}}</p>
+        </li>
+        }
+    </ul>
+</section>
+<app-toast></app-toast>
+
+
